@@ -548,11 +548,11 @@ address{font-style:normal}
 /* ---------- Cookie banner ---------- */
 .cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:1200;padding:1rem 0;pointer-events:none;opacity:0;visibility:hidden;transform:translateY(1rem);transition:opacity .35s ease,transform .35s ease,visibility .35s ease}
 .cookie-banner.is-visible{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
-.cookie-banner__inner{display:flex;align-items:center;justify-content:space-between;gap:1.4rem;padding:1.2rem 1.5rem;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:rgba(10,17,26,.88);backdrop-filter:blur(14px);box-shadow:0 22px 80px -38px rgba(0,0,0,.9)}
+.cookie-banner__inner{display:flex;align-items:center;justify-content:space-between;gap:1.4rem;padding:1.2rem 1.5rem;border:1px solid rgba(255,255,255,.18);border-radius:22px;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);box-shadow:0 22px 80px -38px rgba(15,23,42,.7)}
 .cookie-banner__content{max-width:62ch}
-.cookie-banner__content h3{font-size:1rem;letter-spacing:-.02em;margin:0 0 .4rem}
-.cookie-banner__content p{margin:0;color:var(--muted);line-height:1.6;font-size:.9rem}
-.cookie-banner__content a{color:var(--text);text-decoration:underline;text-underline-offset:3px}
+.cookie-banner__content h3{font-size:1rem;letter-spacing:-.02em;margin:0 0 .4rem;color:#0d1b2a}
+.cookie-banner__content p{margin:0;color:#24364a;line-height:1.6;font-size:.9rem}
+.cookie-banner__content a{color:#0d1b2a;text-decoration:underline;text-underline-offset:3px}
 .cookie-banner__actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.65rem}
 
 /* ---------- Sticky mobile CTA ---------- */
