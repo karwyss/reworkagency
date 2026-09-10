@@ -1,0 +1,13 @@
+{
+  "name": "NOVAFOCUS",
+  "short_name": "NOVAFOCUS",
+  "description": "Strony internetowe, Google Ads, Meta Ads i social media dla firm.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    { "src": "img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
