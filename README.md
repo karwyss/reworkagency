@@ -25,16 +25,16 @@ novafocus/
 ## Co uzupełnić przed publikacją (checklista)
 
 1. **Domena** — zamień `https://novafocus.pl/` w:
-   `index.html` (canonical, og:url, og:image, JSON-LD), `polityka-prywatnosci.html`, `robots.txt`, `sitemap.xml`.
-2. **Dane kontaktowe** — znajdź i zamień `[EMAIL]`, `[TELEFON]`, `[ADRES]`, `[MIASTO]` (index.html + polityka).
-3. **Formularz** — w `js/main.js` na górze:
-   - `CONTACT_EMAIL` — Twój adres (domyślny tryb *mailto*: po walidacji otwiera się klient poczty z gotową wiadomością).
-   - `FORM_ENDPOINT` — jeśli chcesz wysyłkę bez otwierania poczty, załóż darmowe konto w **Formspree** / **Web3Forms** / **Getform** i wklej endpoint. Nadal bez serwera po Twojej stronie.
-4. **Statystyki** — w sekcji `.stats` zamień `XX` na liczby (np. `24`). Gdy wpiszesz liczbę, animacja odliczania włączy się automatycznie.
-5. **Zdjęcie** — wgraj `img/karol.jpg`.
-6. **Social media** — linki w stopce (`https://www.instagram.com/` itd.).
-7. **Realizacje / case studies** — obecne projekty są oznaczone jako *CONCEPT PROJECT*. Gdy pojawią się prawdziwe, podmień treść kart i usuń badge.
-8. **Polityka prywatności** — uzupełnij dane firmy, najlepiej skonsultuj z prawnikiem.
+   `index.html` (canonical, og:url, og:image, JSON-LD), `polityka-prywatnosci.html`, `robots.txt`, `sitemap.xml`. ok
+2. **Dane kontaktowe** — znajdź i zamień `[EMAIL]`, `[TELEFON]`, `[ADRES]`, `[MIASTO]` (index.html + polityka). ok
+3. **Formularz** — w `js/main.js` na górze: ok
+   - `CONTACT_EMAIL` — Twój adres (domyślny tryb *mailto*: po walidacji otwiera się klient poczty z gotową wiadomością).ok
+   - `FORM_ENDPOINT` — jeśli chcesz wysyłkę bez otwierania poczty, załóż darmowe konto w **Formspree** / ok**Web3Forms** / **Getform** i wklej endpoint. Nadal bez serwera po Twojej stronie. ok
+4. **Statystyki** — w sekcji `.stats` zamień `XX` na liczby (np. `24`). Gdy wpiszesz liczbę, animacja odliczania włączy się automatycznie. deleted
+5. **Zdjęcie** — wgraj `img/karol.jpg`. ok
+6. **Social media** — linki w stopce (`https://www.instagram.com/` itd.). ok
+7. **Realizacje / case studies** — obecne projekty są oznaczone jako *CONCEPT PROJECT*. Gdy pojawią się prawdziwe, podmień treść kart i usuń badge. ok
+8. **Polityka prywatności** — uzupełnij dane firmy, najlepiej skonsultuj z prawnikiem. ok
 
 ## Kolor akcentu
 

@@ -85,6 +85,7 @@ address{font-style:normal}
 .btn{--pad:.9rem 1.35rem;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:var(--pad);border-radius:999px;font-weight:650;font-size:.98rem;letter-spacing:-.005em;line-height:1;white-space:nowrap;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .3s,border-color .3s,color .3s;isolation:isolate;overflow:hidden}
 .btn .ico{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s var(--ease)}
 .btn:hover .ico{transform:translateX(3px)}
+.btn--sm{--pad:.7rem .9rem;font-size:.82rem}
 .btn--lg{--pad:1.1rem 1.6rem;font-size:1.02rem}
 .btn--xl{--pad:1.25rem 2rem;font-size:1.1rem}
 .btn--primary{background:var(--accent);color:#fff;box-shadow:0 8px 30px -10px var(--accent-glow),inset 0 1px 0 rgba(255,255,255,.22)}
@@ -541,6 +542,18 @@ address{font-style:normal}
 .footer__social a{display:inline-flex;align-items:center;gap:.4rem}
 .footer__social .ico{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.6}
 .footer__bottom{margin-top:3.5rem;padding-top:1.5rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem 2rem;font-size:.78rem;color:var(--muted-2)}
+.footer__meta{display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;gap:.8rem 1rem}
+.cookie-settings{appearance:none;border:0;background:transparent;color:var(--text);font:inherit;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:0}
+
+/* ---------- Cookie banner ---------- */
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:1200;padding:1rem 0;pointer-events:none;opacity:0;visibility:hidden;transform:translateY(1rem);transition:opacity .35s ease,transform .35s ease,visibility .35s ease}
+.cookie-banner.is-visible{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.cookie-banner__inner{display:flex;align-items:center;justify-content:space-between;gap:1.4rem;padding:1.2rem 1.5rem;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:rgba(10,17,26,.88);backdrop-filter:blur(14px);box-shadow:0 22px 80px -38px rgba(0,0,0,.9)}
+.cookie-banner__content{max-width:62ch}
+.cookie-banner__content h3{font-size:1rem;letter-spacing:-.02em;margin:0 0 .4rem}
+.cookie-banner__content p{margin:0;color:var(--muted);line-height:1.6;font-size:.9rem}
+.cookie-banner__content a{color:var(--text);text-decoration:underline;text-underline-offset:3px}
+.cookie-banner__actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.65rem}
 
 /* ---------- Sticky mobile CTA ---------- */
 .sticky-cta{display:none}

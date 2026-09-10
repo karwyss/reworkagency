@@ -1,6 +1,6 @@
 {
-  "name": "NOVAFOCUS",
-  "short_name": "NOVAFOCUS",
+  "name": "REWORK",
+  "short_name": "REWORK",
   "description": "Strony internetowe, Google Ads, Meta Ads i social media dla firm.",
   "start_url": "/",
   "display": "browser",
@@ -8,6 +8,6 @@
   "theme_color": "#09090b",
   "icons": [
     { "src": "img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
-    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "img/favicon-32.ico", "sizes": "32x32", "type": "image/x-icon" }
   ]
 }

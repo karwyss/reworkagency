@@ -337,6 +337,34 @@
     });
   }
 
+  /* ---------- Cookie consent ---------- */
+  const COOKIE_KEY = 'rework-cookie-consent';
+  const cookieBanner = $('#cookie-banner');
+  const cookieSettings = $('#cookie-settings');
+
+  const setCookiePreference = value => {
+    try { localStorage.setItem(COOKIE_KEY, value); } catch (err) { console.warn('Cookie save failed:', err); }
+    cookieBanner?.classList.remove('is-visible');
+  };
+
+  const showCookieBanner = () => {
+    if (!cookieBanner) return;
+    const saved = (() => {
+      try { return localStorage.getItem(COOKIE_KEY); } catch (err) { return null; }
+    })();
+    if (!saved) cookieBanner.classList.add('is-visible');
+  };
+
+  cookieBanner?.querySelectorAll('[data-cookie]').forEach(btn => {
+    btn.addEventListener('click', () => setCookiePreference(btn.dataset.cookie));
+  });
+
+  cookieSettings?.addEventListener('click', () => {
+    cookieBanner?.classList.add('is-visible');
+  });
+
+  showCookieBanner();
+
   /* ---------- Footer year ---------- */
   const y = $('#year');
   if (y) y.textContent = new Date().getFullYear();
