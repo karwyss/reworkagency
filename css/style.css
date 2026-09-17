@@ -539,7 +539,8 @@ address{font-style:normal}
 .footer__col ul{display:grid;gap:.6rem}
 .footer__col a,.footer__col span{font-size:.95rem;color:var(--muted);transition:color .3s}
 .footer__col a:hover{color:var(--text)}
-.footer__social {display: flex;flex-wrap: wrap;gap: 1.5rem;list-style: none;padding: 0;margin: 0}
+/* .footer__social {display: flex;flex-wrap: wrap;gap: 1.5rem;list-style: none;padding: 0;margin: 0} */
+.footer__col .footer__social {display: flex;flex-wrap: wrap;gap: 1.5rem;list-style: none;padding: 0;margin: 0}
 .footer__social a{display:inline-flex;align-items:center;gap:.4rem}
 .footer__social .ico{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.6}
 .footer__bottom{margin-top:3.5rem;padding-top:1.5rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem 2rem;font-size:.78rem;color:var(--muted-2)}
