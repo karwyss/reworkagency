@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-25N504MHB2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-25N504MHB2');
-</script>
+  <!-- 1. Kodowanie i Viewport ZAWSZE na samym początku -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
   <title>REWORK | Strony internetowe i Reklama (Wadowice, Kraków, Warszawa)</title>
   <meta name="description" content="Tworzenie stron internetowych dla firm, kampanie Google Ads i Meta Ads, social media i montaż rolek. Marketing internetowy połączony w jeden system, który zdobywa klientów. Porozmawiajmy.">
   <link rel="canonical" href="https://reworkagency.pl/">
+  
+  <!-- 2. Preconnect dla połączeń zewnętrznych (przyspiesza Google Analytics) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+
+  <!-- 3. Preload kluczowych zasobów (CSS, Główny Font, Obrazek Hero under LCP) -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- PRELOAD DLA OBRAZKA HERO (PODMIEN ŚCIEŻKĘ NA SWÓJ GŁÓWNY OBRAZEK W WEBP) -->
+  <link rel="preload" as="image" href="img/reworklogo.webp" fetchpriority="high">
+
+  <!-- Meta pomocnicze -->
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#fbfdff">
   <meta name="color-scheme" content="light">
@@ -37,19 +43,25 @@
   <meta name="twitter:description" content="Strony internetowe, Google Ads, Meta Ads, social media i short-form video. Jeden system pozyskiwania klientów.">
   <meta name="twitter:image" content="https://reworkagency.pl/img/og.jpg">
 
-  <!-- Icons -->
+  <!-- Icons & Manifest -->
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/pl/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <!-- Fonts (self-hosted) -->
-  <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/manrope-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/instrument-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Google site verification -->
+  <meta name="google-site-verification" content="Hr4X7zYTWBv1fOt2DvRyPno-9QnUqOQKPtbMxYy-mos" />
 
-  <!-- JSON-LD -->
+  <!-- 4. Google Analytics przesunięty na dół head z optymalizacją pobierania -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25N504MHB2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25N504MHB2');
+  </script>
+
+  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -73,34 +85,13 @@
         "postalCode": "34-100"
       },
       "areaServed": [
-        {
-          "@type": "AdministrativeArea",
-          "name": "Województwo Małopolskie"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Województwo Śląskie"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Wadowice"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Kraków"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Warszawa"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Bielsko-Biała"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Oświęcim"
-        }
+        { "@type": "AdministrativeArea", "name": "Województwo Małopolskie" },
+        { "@type": "AdministrativeArea", "name": "Województwo Śląskie" },
+        { "@type": "AdministrativeArea", "name": "Wadowice" },
+        { "@type": "AdministrativeArea", "name": "Kraków" },
+        { "@type": "AdministrativeArea", "name": "Warszawa" },
+        { "@type": "AdministrativeArea", "name": "Bielsko-Biała" },
+        { "@type": "AdministrativeArea", "name": "Oświęcim" }
       ],
       "founder": { "@id": "https://reworkagency.pl/#karol" },
       "sameAs": [
@@ -164,10 +155,7 @@
     }
   ]
 }
-</script>
-
-
-  <meta name="google-site-verification" content="Hr4X7zYTWBv1fOt2DvRyPno-9QnUqOQKPtbMxYy-mos" />
+  </script>
 </head>
 <body>
 <a class="skip-link" href="#main">Przejdź do treści</a>
