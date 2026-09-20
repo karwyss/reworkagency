@@ -27,7 +27,7 @@
   const menu = $('#menu');
 
   const onScrollNav = () => nav.classList.toggle('is-scrolled', window.scrollY > 12);
-  onScrollNav();
+  requestAnimationFrame(onScrollNav);
   window.addEventListener('scroll', onScrollNav, { passive: true });
 
   const closeMenu = () => {
@@ -90,7 +90,7 @@
 
   /* ---------- Hero parallax (subtle) ---------- */
   const stage = $('.stage');
-  if (stage && !reduceMotion) {
+  if (stage && !reduceMotion && !(window.innerWidth < 768)) {
     const layers = $$('[data-depth]', stage);
     let tx = 0, ty = 0, cx = 0, cy = 0, raf = null, scrollY0 = 0;
     const tick = () => {
@@ -129,7 +129,7 @@
   /* ---------- Process timeline progress ---------- */
   const timeline = $('#timeline');
   const progress = $('#timeline-progress');
-  if (timeline && progress) {
+  if (timeline && progress && window.innerWidth >= 768) {
     const steps = $$('.step', timeline);
     const update = () => {
       const r = timeline.getBoundingClientRect();
@@ -141,7 +141,7 @@
         s.classList.toggle('is-passed', sr.top + sr.height * 0.5 < vh * 0.62);
       });
     };
-    update();
+    requestAnimationFrame(update);
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
   }
