@@ -16,8 +16,9 @@
   <!-- 3. Preload kluczowych zasobów (Główny Font, Obrazek Hero under LCP) -->
   <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   
-  <!-- PRELOAD DLA OBRAZKA HERO (PODMIEN ŚCIEŻKĘ NA SWÓJ GŁÓWNY OBRAZEK W WEBP) -->
-  <link rel="preload" as="image" href="img/reworklogo.webp" fetchpriority="high">
+  <!-- PRELOAD DLA OBRAZKA HERO (LCP) — wariant mobilny i desktopowy -->
+  <link rel="preload" as="image" href="img/reworklogo.webp" media="(min-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="img/reworklogo-mobile.webp" media="(max-width: 767px)" fetchpriority="high">
 
   <!-- Krytyczny CSS (Nawigacja + Hero) — inline, nie blokuje renderowania -->
   <style>

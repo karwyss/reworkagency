@@ -27,7 +27,7 @@
   const menu = $('#menu');
 
   const onScrollNav = () => nav.classList.toggle('is-scrolled', window.scrollY > 12);
-  requestAnimationFrame(onScrollNav);
+  window.addEventListener('load', onScrollNav);
   window.addEventListener('scroll', onScrollNav, { passive: true });
 
   const closeMenu = () => {
@@ -141,7 +141,7 @@
         s.classList.toggle('is-passed', sr.top + sr.height * 0.5 < vh * 0.62);
       });
     };
-    requestAnimationFrame(update);
+    window.addEventListener('load', update);
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
   }
