@@ -533,7 +533,7 @@ address{font-style:normal}
 
 /* ---------- Footer ---------- */
 .footer{border-top:1px solid var(--line);background:var(--bg-2);padding:4.5rem 0 2rem}
-.footer__top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem 2rem}
+.footer__top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:3rem 2rem}
 .footer__tag{margin-top:1rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;color:var(--accent)}
 .footer__desc{margin-top:1rem;color:var(--muted);font-size:.92rem;max-width:36ch;line-height:1.6}
 .footer__col h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);margin-bottom:1.1rem;font-weight:600}
