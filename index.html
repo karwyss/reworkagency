@@ -164,7 +164,7 @@
 <header class="nav" id="top">
   <div class="container nav__inner">
     <a class="logo" href="#top" aria-label="REWORK — strona główna">
-      <img class="logo__image" src="img/reworklogo_justlogo.webp" alt="REWORK" fetchpriority="high">
+      <img class="logo__image" src="img/reworklogo_justlogo.webp" alt="REWORK" width="75" height="75">
       <span class="logo__word">REWORK</span>
     </a>
 
@@ -233,7 +233,12 @@
                 <p></p><p></p>
                 <div class="site__btns"><em>Zobacz ofertę</em><i>Porozmawiajmy</i></div>
               </div>
-              <div class="site__img"><img src="img/reworklogo.webp" alt="REWORK — logo marki" width="480" height="528" decoding="async" fetchpriority="high"></div>
+              <div class="site__img">
+                <picture>
+                  <source srcset="img/reworklogo-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                  <img src="img/reworklogo.webp" alt="REWORK — logo marki" width="480" height="528" fetchpriority="high" decoding="async">
+                </picture>
+              </div>
             </div>
             <div class="site__row"><i></i><i></i><i></i></div>
           </div>
@@ -413,8 +418,9 @@
       <p class="section__lead">Nie chodzi o to, żeby mieć kolejną ładną stronę. Chodzi o stworzenie systemu, który przyciąga uwagę, buduje zaufanie i prowadzi klienta do kontaktu.</p>
     </div>
 
-    <ol class="flow reveal" aria-label="Etapy systemu pozyskiwania klientów">
+    <div class="flow-wrapper reveal">
       <div class="flow__line" aria-hidden="true"><i></i></div>
+      <ol class="flow" aria-label="Etapy systemu pozyskiwania klientów">
       <li class="flow__node" style="--i:0">
         <span class="flow__ring"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span>
         <span class="flow__step">Strategia</span>
@@ -441,6 +447,7 @@
         <p>Zapytanie, telefon, zamówienie. Efekt, o który chodzi.</p>
       </li>
     </ol>
+    </div>
 
     <div class="system__cta reveal">
       <a class="btn btn--primary btn--lg" href="#kontakt">Zbudujmy taki system <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
@@ -609,7 +616,7 @@
           <div class="phone phone--sm" aria-hidden="true">
             <div class="phone__screen">
               <div class="phone__top"><span>Reels</span><i></i></div>
-              <div class="phone__video phone__video--verde"><!-- <img src="" alt="" width="480" height="528" loading="lazy" decoding="async">--><div class="phone__play"></div></div>
+              <div class="phone__video phone__video--verde"><div class="phone__play"></div></div>
               <div class="phone__caption"><b>@wrona.koparki</b><span>Usługi koparką</span></div>
               <div class="phone__bar"><i></i></div>
             </div>
