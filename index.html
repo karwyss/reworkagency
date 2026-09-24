@@ -296,7 +296,7 @@
       "description": "Studio marketingu internetowego: tworzenie stron internetowych dla firm, landing pages, kampanie Google Ads i Meta Ads, prowadzenie social media, montaż Reels, TikTok i Shorts.",
       "telephone": "+48577594266",
       "email": "karwys08@gmail.com",
-      "priceRange": "PLN",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "PL",
@@ -304,6 +304,20 @@
         "addressLocality": "Wadowice",
         "postalCode": "34-100"
       },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
       "areaServed": [
         { "@type": "AdministrativeArea", "name": "Województwo Małopolskie" },
         { "@type": "AdministrativeArea", "name": "Województwo Śląskie" },
@@ -315,19 +329,21 @@
       ],
       "founder": { "@id": "https://reworkagency.pl/#karol" },
       "sameAs": [
-        "https://www.instagram.com/reworkagency.pl?stkn=dzY3ZjMzN2hkMTNp&utm_source=qr",
-        "https://www.facebook.com/share/17uAzSNZjy?mibextid=wwXlfr",
-        "https://www.tiktok.com/@reworkit.pl?_r=1&_t=ZN-99cd1R6NONS"
+        "https://www.instagram.com/reworkagency.pl",
+        "https://www.facebook.com/share/17uAzSNZjy",
+        "https://www.tiktok.com/@reworkit.pl",
+        "https://share.google/2WM1vJ05jtzNSjnRO",
+        "https://maps.app.goo.gl/xcDYh9zhWdaC8Ks37?g_st=ic",
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Usługi marketingu internetowego",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tworzenie stron internetowych i landing pages" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kampanie Google Ads" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kampanie Meta Ads (Facebook Ads, Instagram Ads)" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Prowadzenie social media" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Montaż Reels, TikTok i Shorts" } }
+          { "@type": "Offer","position": 1, "itemOffered": { "@type": "Service", "name": "Tworzenie stron internetowych i landing pages" } },
+          { "@type": "Offer","position": 2, "itemOffered": { "@type": "Service", "name": "Kampanie Google Ads" } },
+          { "@type": "Offer","position": 3, "itemOffered": { "@type": "Service", "name": "Kampanie Meta Ads (Facebook Ads, Instagram Ads)" } },
+          { "@type": "Offer","position": 4, "itemOffered": { "@type": "Service", "name": "Prowadzenie social media" } },
+          { "@type": "Offer","position": 5, "itemOffered": { "@type": "Service", "name": "Montaż Reels, TikTok i Shorts" } }
         ]
       }
     },
@@ -365,12 +381,54 @@
             "text": "Tak, konfiguruję od zera oraz optymalizuję lokalne kampanie Google Ads oraz Meta Ads (Facebook) na terenie Małopolski (Wadowice, Kraków, Oświęcim) oraz dla klientów z całego kraju. Skupiam się na pozyskiwaniu realnych zapytań i kontaktów, a nie pustych kliknięć." 
           } 
         },
-        { "@type": "Question", "name": "Ile trwa stworzenie strony?", "acceptedAnswer": { "@type": "Answer", "text": "Landing page powstaje szybciej niż pełna strona firmowa. Termin ustalamy na starcie – zależy głównie od zakresu i tempa dostarczania materiałów. Zawsze dostajesz harmonogram z konkretnymi etapami." } },
-        { "@type": "Question", "name": "Czy prowadzisz Facebooka i Instagrama?", "acceptedAnswer": { "@type": "Answer", "text": "Tak – zarówno bieżące prowadzenie profili (strategia, grafiki, opisy, publikacja), jak i płatne kampanie Meta Ads." } },
-        { "@type": "Question", "name": "Czy montujesz rolki?", "acceptedAnswer": { "@type": "Answer", "text": "Tak. Montuję Reels, TikToki i Shorts: dynamiczne cięcie, napisy, hooki, dźwięk. Możesz dostarczyć własne nagrania albo ustalimy, jak nagrać je prosto telefonem." } },
-        { "@type": "Question", "name": "Czy możesz zająć się całym marketingiem?", "acceptedAnswer": { "@type": "Answer", "text": "Tak. Strona, reklamy i content są wtedy spójne i wzajemnie się wzmacniają, a Ty masz jedną osobę odpowiedzialną za całość." } },
-        { "@type": "Question", "name": "Czy można zacząć tylko od strony?", "acceptedAnswer": { "@type": "Answer", "text": "Oczywiście. Wiele współprac zaczyna się od strony lub landing page'a, a reklamy i content dochodzą później." } },
-        { "@type": "Question", "name": "Czy oferujesz późniejszą obsługę?", "acceptedAnswer": { "@type": "Answer", "text": "Tak. Po wdrożeniu możesz liczyć na wsparcie techniczne, aktualizacje, rozwój strony i stałą opiekę nad kampaniami czy social mediami." } }
+        { 
+          "@type": "Question", 
+          "name": "Ile trwa stworzenie strony?", 
+          "acceptedAnswer": { 
+            "@type": "Answer", 
+            "text": "Landing page powstaje szybciej niż pełna strona firmowa. Termin ustalamy na starcie – zależy głównie od zakresu i tempa dostarczania materiałów. Zawsze dostajesz harmonogram z konkretnymi etapami." 
+          } 
+        },
+        { 
+          "@type": "Question", 
+          "name": "Czy prowadzisz Facebooka i Instagrama?", 
+          "acceptedAnswer": { 
+            "@type": "Answer", 
+            "text": "Tak – zarówno bieżące prowadzenie profili (strategia, grafiki, opisy, publikacja), jak i płatne kampanie Meta Ads." 
+          } 
+        },
+        { 
+          "@type": "Question", 
+          "name": "Czy montujesz rolki?", 
+          "acceptedAnswer": { 
+            "@type": "Answer", 
+            "text": "Tak. Montuję Reels, TikToki i Shorts: dynamiczne cięcie, napisy, hooki, dźwięk. Możesz dostarczyć własne nagrania albo ustalimy, jak nagrać je prosto telefonem." 
+          } 
+        },
+        { 
+          "@type": "Question", 
+          "name": "Czy możesz zająć się całym marketingiem?", 
+          "acceptedAnswer": { 
+            "@type": "Answer", 
+            "text": "Tak. Strona, reklamy i content są wtedy spójne i wzajemnie się wzmacniają, a Ty masz jedną osobę odpowiedzialną za całość." 
+          } 
+        },
+        { 
+          "@type": "Question", 
+          "name": "Czy można zacząć tylko od strony?", 
+          "acceptedAnswer": { 
+            "@type": "Answer", 
+            "text": "Oczywiście. Wiele współprac zaczyna się od strony lub landing page'a, a reklamy i content dochodzą później." 
+          } 
+        },
+        { 
+          "@type": "Question", 
+          "name": "Czy oferujesz późniejszą obsługę?", 
+          "acceptedAnswer": { 
+            "@type": "Answer", 
+            "text": "Tak. Po wdrożeniu możesz liczyć na wsparcie techniczne, aktualizacje, rozwój strony i stałą opiekę nad kampaniami czy social mediami." 
+          } 
+        }
       ]
     }
   ]
