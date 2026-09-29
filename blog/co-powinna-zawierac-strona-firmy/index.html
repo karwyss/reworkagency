@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    function loadGtag(){
+      var sc = document.createElement('script');
+      sc.async = true;
+      sc.src = 'https://www.googletagmanager.com/gtag/js?id=G-25N504MHB2';
+      document.head.appendChild(sc);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-25N504MHB2');
+    (function(){
+      var done = false;
+      function fire(){
+        if (done) return;
+        done = true;
+        if ('requestIdleCallback' in window) requestIdleCallback(loadGtag, {timeout: 2000});
+        else setTimeout(loadGtag, 2000);
+      }
+      ['scroll','touchstart','pointerdown','keydown'].forEach(function(ev){
+        window.addEventListener(ev, fire, {once:true, passive:true});
+      });
+      setTimeout(fire, 3500);
+    })();
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Strona internetowa dla firmy — co powinna zawierać? | Blog REWORK</title>
+  <meta name="description" content="Lista sekcji, treści i elementów, które zamieniają odwiedzającego stronę firmową w zapytanie o ofertę. Sprawdzony szkielet skutecznej strony.">
+  <link rel="canonical" href="https://reworkagency.pl/blog/co-powinna-zawierac-strona-firmy/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <script>document.documentElement.classList.add('js')</script>
+
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+
+  <link rel="preload" href="../../fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../fonts/manrope-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="REWORK">
+  <meta property="og:url" content="https://reworkagency.pl/blog/co-powinna-zawierac-strona-firmy/">
+  <meta property="og:title" content="Strona internetowa dla firmy — co powinna zawierać?">
+  <meta property="og:description" content="Sekcje i treści, które zamieniają odwiedzającego w zapytanie o ofertę. Sprawdzony szkielet strony firmowej.">
+  <meta property="og:image" content="https://reworkagency.pl/blog/assets/cover-co-powinna-zawierac.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Strona internetowa firmy — co powinna zawierać?">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Strona internetowa dla firmy — co powinna zawierać?">
+  <meta name="twitter:description" content="Sekcje i treści, które zamieniają odwiedzającego w zapytanie o ofertę.">
+  <meta name="twitter:image" content="https://reworkagency.pl/blog/assets/cover-co-powinna-zawierac.svg">
+
+  <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <style>
+    :root{--bg:#fbfdff;--bg-2:#eef4fb;--surface:#fff;--line:rgba(11,31,55,.1);--line-2:rgba(11,31,55,.18);--text:#0b1f37;--muted:#53657a;--muted-2:#718198;--accent:#0878f9;--accent-2:#29a6ff;--accent-glow:rgba(8,120,249,.45);--ok:#3ddc97;--err:#ff5d5d;--sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--serif:"Instrument Serif",Georgia,"Times New Roman",serif;--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--container:1240px;--gutter:clamp(1.25rem,4vw,2.5rem);--section:clamp(5rem,10vw,9rem);--r-sm:12px;--r-md:18px;--r-lg:26px;--r-xl:34px;--ease:cubic-bezier(.22,1,.36,1);--dur:.6s;--nav-h:72px}
+    *,*::before,*::after{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px)}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;font-weight:450;-webkit-font-smoothing:antialiased;overflow-x:clip}
+    body.is-locked{overflow:hidden}
+    img,svg,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer;background:none;border:0;padding:0}
+    ul,ol{margin:0;padding:0;list-style:none}h1,h2,h3,h4,p,figure,dl,dd{margin:0}address{font-style:normal}
+    ::selection{background:var(--accent);color:#fff}
+    :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+    .skip-link{position:absolute;left:1rem;top:-100px;z-index:1000;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:8px;font-weight:700}
+    .skip-link:focus{top:1rem}
+    .container{width:min(100% - 2*var(--gutter),var(--container));margin-inline:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
+    .eyebrow::before{content:"";width:22px;height:1px;background:var(--accent)}
+    .eyebrow--center{justify-content:center}.eyebrow--center::before{display:none}
+    .btn{--pad:.9rem 1.35rem;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:var(--pad);border-radius:999px;font-weight:650;font-size:.98rem;line-height:1;white-space:nowrap}
+    .btn .ico{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .btn--sm{--pad:.7rem .9rem;font-size:.82rem}.btn--lg{--pad:1.1rem 1.6rem;font-size:1.02rem}
+    .btn--primary{background:var(--accent);color:#fff;box-shadow:0 8px 30px -10px var(--accent-glow),inset 0 1px 0 rgba(255,255,255,.22)}
+    .btn--ghost{background:rgba(11,31,55,.04);border:1px solid var(--line-2);color:var(--text)}
+    .nav{position:fixed;inset:0 0 auto 0;z-index:100;height:var(--nav-h);background:rgba(251,253,255,.9);backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--line)}
+    .nav__inner{position:relative;height:100%;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .logo{display:inline-flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.06em;font-size:1.05rem;color:var(--text)}
+    .logo__image{width:75px;height:75px;object-fit:cover;border-radius:9px;flex:none}
+    .nav__menu ul{display:flex;gap:.25rem}
+    .nav__menu a{display:inline-block;padding:.55rem .85rem;border-radius:999px;font-size:.94rem;font-weight:550;color:var(--muted)}
+    .nav__menu a.is-active{color:var(--accent);font-weight:700}
+    .nav__menu-foot{display:none}
+    .nav__actions{display:flex;align-items:center;gap:.75rem}
+    .nav__cta{--pad:.7rem 1.15rem;font-size:.92rem}
+    .burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line-2);background:rgba(11,31,55,.04);position:relative}
+    .orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none}
+    .orb--a{width:640px;height:640px;right:-160px;top:-180px;background:radial-gradient(circle at 40% 40%,rgba(8,120,249,.34),rgba(8,120,249,0) 65%)}
+    .orb--b{width:520px;height:520px;left:-200px;bottom:-200px;background:radial-gradient(circle,rgba(41,166,255,.14),rgba(41,166,255,0) 65%)}
+    .grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(11,31,55,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(11,31,55,.055) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 60% 30%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 60% 30%,#000 20%,transparent 75%)}
+    @media (max-width:980px){:root{--nav-h:64px}.nav__cta{display:none}.burger{display:block}.nav__menu{position:fixed;inset:var(--nav-h) 0 0 0;background:var(--bg);padding:1.5rem var(--gutter) 2rem;display:flex;flex-direction:column;justify-content:space-between;overflow:auto}.nav__menu ul{flex-direction:column;gap:0}.nav__menu-foot{display:grid;gap:1rem;padding-top:1.5rem}.nav__menu-foot .btn{width:100%;color:#fff;background:var(--accent)}.nav__menu-foot p{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;color:var(--muted);text-align:center}}
+    @media (max-width:640px){body{font-size:1rem}}
+  </style>
+
+  <link rel="preload" href="../../css/style.css" as="style">
+  <link rel="stylesheet" href="../../css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../../css/style.css"></noscript>
+
+  <link rel="preload" href="../../css/blog.css" as="style">
+  <link rel="stylesheet" href="../../css/blog.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../../css/blog.css"></noscript>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Strona internetowa dla firmy — co powinna zawierać?",
+  "description": "Lista sekcji, treści i elementów, które zamieniają odwiedzającego stronę firmową w zapytanie o ofertę.",
+  "image": "https://reworkagency.pl/blog/assets/cover-co-powinna-zawierac.svg",
+  "datePublished": "2026-09-21",
+  "dateModified": "2026-09-21",
+  "inLanguage": "pl-PL",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://reworkagency.pl/blog/co-powinna-zawierac-strona-firmy/" },
+  "author": { "@type": "Person", "name": "Karol — REWORK", "url": "https://reworkagency.pl/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "REWORK",
+    "url": "https://reworkagency.pl/",
+    "logo": { "@type": "ImageObject", "url": "https://reworkagency.pl/img/apple-touch-icon.png" }
+  }
+}
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+<div class="reading-progress" id="reading-progress" aria-hidden="true"><i></i></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="top">
+  <div class="container nav__inner">
+    <a class="logo" href="../../index.html" aria-label="REWORK — strona główna">
+      <img class="logo__image" src="../../img/reworklogo_justlogo.webp" alt="REWORK" width="75" height="75">
+      <span class="logo__word">REWORK</span>
+    </a>
+
+    <nav class="nav__menu" id="menu" aria-label="Menu główne">
+      <ul>
+        <li><a href="../../index.html#uslugi">Usługi</a></li>
+        <li><a href="../../index.html#realizacje">Realizacje</a></li>
+        <li><a href="../index.html" class="is-active" aria-current="page">Blog</a></li>
+        <li><a href="../../index.html#proces">Proces</a></li>
+        <li><a href="../../index.html#o-mnie">O mnie</a></li>
+        <li><a href="../../index.html#faq">FAQ</a></li>
+        <li><a href="../../index.html#kontakt">Kontakt</a></li>
+      </ul>
+      <div class="nav__menu-foot">
+        <a class="btn btn--primary btn--lg" href="../../index.html#kontakt">Porozmawiajmy <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
+        <p>WEB • ADS • SOCIAL</p>
+      </div>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--primary nav__cta" href="../../index.html#kontakt">Porozmawiajmy <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
+      <button class="burger" type="button" aria-label="Otwórz menu" aria-controls="menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ ARTYKUŁ ============ -->
+<article class="blog-post">
+  <div class="blog-post__head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Okruszki">
+        <a href="../../index.html">Strona główna</a>
+        <span class="sep"></span>
+        <a href="../index.html">Blog</a>
+        <span class="sep"></span>
+        <a href="../index.html#posts">Strony internetowe</a>
+        <span class="sep"></span>
+        <span aria-current>Co powinna zawierać strona?</span>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="article__head">
+      <div class="tags"><span class="tag" style="font-size:.76rem;font-weight:600;padding:.32rem .65rem;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)">Strony internetowe</span></div>
+      <h1 class="article__title" id="tytul">Strona internetowa dla firmy — co powinna zawierać?</h1>
+      <p class="article__sub">Strona firmowa to nie portfolio graficzne, tylko narzędzie sprzedaży. Sprawdzona lista sekcji i treści, które zamieniają odwiedzającego w zapytanie o ofertę — albo przynajmniej w kontakt telefoniczny.</p>
+      <div class="article__meta">
+        <span class="author"><span class="author__avatar">K</span> Karol — REWORK</span>
+        <span class="sep"></span>
+        <time datetime="2026-09-21">21 September 2026</time>
+        <span class="sep"></span>
+        <span>7 min czytania</span>
+      </div>
+    </div>
+
+    <figure class="article__media">
+      <img src="../assets/cover-co-powinna-zawierac.svg" width="1200" height="630" loading="eager" decoding="async" alt="Strona internetowa firmy — co powinna zawierać?">
+    </figure>
+
+    <div class="article__read">
+      <nav class="toc" id="toc" aria-label="Spis treści"></nav>
+
+      <div class="prose">
+        <p>Każdy klient, zanim trafi na Twoją stronę, ma już jakieś pytanie: <strong>„czy ta firma może mi pomóc?", „ile to będzie kosztować?" albo „czy mogę im zaufać?"</strong>. Strona firmowa ma na te pytania odpowiadać w odpowiedniej kolejności — i poprowadzić odwiedzającego do działania.</p>
+
+        <p>Poniżej znajdziesz szkielet skutecznej strony firmowej. Traktuj go jako checklistę — nie każda firma potrzebuje wszystkich elementów, ale omijanie ich powinno być świadomą decyzją, a nie przeoczeniem.</p>
+
+        <h2>Strona główna to Twoja najlepsza sprzedawczyni</h2>
+
+        <p>Strona główna ma w ciągu kilku sekund odpowiedzieć na cztery pytania: <strong>kim jesteś, dla kogo pracujesz, co oferujesz i jak się z Tobą skontaktować</strong>. Jeśli odwiedzający nie złapie jednego z nich, prawdopodobnie zaraz wróci do Google.</p>
+
+        <h3>Nagłówek z jasnym przekazem</h3>
+        <p>„Firma X" to nie nagłówek. „Montaż instalacji elektrycznych na terenie Małopolski" to już przekaz, który mówi komu i w czym pomagasz. Odważnie pisz o swojej specjalizacji — konkret przyciąga właściwych klientów.</p>
+
+        <h3>Zdjęcia, które budują zaufanie</h3>
+        <p>Autentyczne zdjęcia z firmy (zespół, realizacje, lokal) działają na zaufanie lepiej niż stockowe pejzaże. To jedna z najtańszych inwestycji w konwersję, którą firmy najczęściej pomijają.</p>
+
+        <h2>Kluczowe sekcje dobrej strony firmowej</h2>
+
+        <h3>1. Oferta / usługi</h3>
+        <p>Osobna podstrona lub wyraźna sekcja dla każdej usługi. Klient szuka konkretu: zakres, w jakim rejonie działasz, od czego zależy cena. Rozwlekłe opisy bez podziału na sekcje nie działają.</p>
+
+        <h3>2. Realizacje i zaufanie</h3>
+        <p>Realne przykłady pracy, opinie klientów, certyfikaty czy logotypy klientów. Nie musisz mieć dziesiątek projektów — trzy konkretne realizacje z opisem problemu i efektu budują wiarygodność.</p>
+
+        <h3>3. Odpowiedzi na pytania / FAQ</h3>
+        <p>Zbierz co kwartał to, o co pytają Cię klienci, i publikuj to na stronie. To skraca cykl sprzedaży i poprawia pozycjonowanie naturalnie — bo teksty są pisane językiem klientów.</p>
+
+        <h3>4. Kontakt, który widać od razu</h3>
+        <p>Telefon, formularz i adres powinny być obecne w każdym zakątku strony, a nie tylko na podstronie „Kontakt". Klient nie ma być zmuszony do szukania.</p>
+
+        <blockquote>
+          <p>Zasada jest prosta: <strong>im mniej kliknięć dzieli klienta od kontaktu, tym więcej zapytań dostajesz.</strong> Dlatego przycisk „Porozmawiajmy" powinien się pojawiać wielokrotnie.</p>
+        </blockquote>
+
+        <h2>Elementy, które odróżniają „ładną" stronę od „skutecznej"</h2>
+
+        <h3>Wersja mobile w pierwszej kolejności</h3>
+        <p>Większość ruchu na stronach firmowych w Polsce pochodzi z telefonów. Projektowanie „najpierw mobile" to nie opcja, tylko standard.</p>
+
+        <h3>Szybkość ładowania</h3>
+        <p>Wolna strona traci pozycje w Google i klientów na poziomie ok. 50% rezygnacji przy 3 sekundach ładowania. Kompresja zdjęć i prosty, wydajny kod to podstawa.</p>
+
+        <h3>Jasne wezwania do działania</h3>
+        <p>Każda sekcja może kończyć się konkretnym CTA: „Pobierz darmową wycenę", „Zobacz realizacje", „Zadzwoń teraz". Zbyt wiele równorzędnych przycisków rozmywa uwagę — wybierz jeden główny cel.</p>
+
+        <h3>Dane techniczne pod SEO</h3>
+        <p>Tytuły, opisy, hierarchia nagłówków, struktura URL i szybkość — wszystko to przygotowuje stronę pod pozycjonowanie od pierwszego dnia. Na temat tego, od czego zacząć z SEO, piszę w artykule <a href="../seo-od-czego-zaczac/index.html">SEO strony internetowej — od czego zacząć?</a>.</p>
+
+        <h2>Czego na stronie firmowej NIE powinno być</h2>
+
+        <ul>
+          <li><strong>Muzyka w tle i auto-play video</strong> — na desktopie irytuje, na mobile wyłącza się samo.</li>
+          <li><strong>Sztuczne liczniki i „zaufanie" z generycznymi cytatami</strong> — zwykle odstraszają wprawnego klienta.</li>
+          <li><strong>Przesadzone animacje</strong>, które spowalniają stronę bez wartości dla treści.</li>
+          <li><strong>Pusty „aktualności"</strong> z jednym wpisem sprzed dwóch lat.</li>
+        </ul>
+
+        <div class="callout">
+          <p class="callout__t">Praktyczny początek</p>
+          <p>Zanim zaprojektujesz cokolwiek wizualnie, zapisz na kartce: co robisz, dla kogo, w jakim rejonie i co klient ma zrobić na stronie. To będzie fundament całego projektu.</p>
+        </div>
+
+        <h2>Struktura, którą można skalować</h2>
+
+        <p>Dobra strona rośnie razem z firmą. Dziś masz 5 podstron, za rok będzie ich 15 — dojdą nowe usługi, realizacje, blog. Dlatego już na starcie warto mieć system zarządzania treścią, który pozwala dodawać strony bez pisania kodu od zera, oraz hierarchię, która nie zawała się pod nową zawartość.</p>
+
+        <p>Odpowiada to także na pytanie o koszt: zakres funkcji i liczba podstron to główne składowe ceny. Rzetelne informacje o budżecie znajdziesz w artykule <a href="../ile-kosztuje-strona-internetowa/index.html">Ile kosztuje strona internetowa dla firmy w 2026 roku?</a>.</p>
+
+        <h2>Podsumowanie</h2>
+
+        <p>Skuteczna strona firmowa zawiera: jasny nagłówek, wyraźną ofertę, dowody zaufania, FAQ i — przede wszystkim — <strong>łatwo dostępny kontakt powtórzony w kilku miejscach</strong>. Projektuj ją dla swojego klienta i jego pytań, nie dla portfolio.</p>
+
+        <p>Jeśli chcesz wiedzieć, jakich błędów unikać, zajrzyj do tekstu <a href="../bledy-strony-firmy/index.html">5 błędów, przez które strona firmy nie generuje klientów</a>. A gdy uznasz, że nadszedł czas na realną stronę — <a href="../../index.html#kontakt">napisz do mnie</a>, chętnie pomogę.</p>
+      </div>
+
+      <aside class="article-cta">
+        <h2>Potrzebujesz strony internetowej dla swojej firmy?</h2>
+        <p>Opowiedz nam o swoim projekcie — przygotujemy indywidualną wycenę.</p>
+        <a class="btn btn--primary btn--lg" href="../../index.html#kontakt">Poproś o wycenę <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
+        <p class="cta-note">Odpowiadam osobiście, zwykle w ciągu jednego dnia.</p>
+      </aside>
+    </div>
+  </div>
+</article>
+
+<!-- ============ POWIĄZANE ARTYKUŁY ============ -->
+<section class="section" aria-labelledby="related-title">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Czytaj dalej</p>
+      <h2 class="h2" id="related-title">Może Cię również zainteresować</h2>
+    </div>
+    <div class="related__grid">
+
+      <article class="post" data-cats="strony-internetowe poradniki">
+        <a class="post__media" href="../ile-kosztuje-strona-internetowa/index.html" tabindex="-1" aria-hidden="true">
+          <img src="../assets/cover-ile-kosztuje-strona.svg" width="1200" height="630" loading="lazy" decoding="async" alt="Ile kosztuje strona internetowa dla firmy w 2026 roku?">
+        </a>
+        <div class="post__body">
+          <div class="tags"><span class="tag" style="font-size:.76rem;font-weight:600;padding:.32rem .65rem;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)">Strony internetowe</span></div>
+          <h3 class="post__title"><a href="../ile-kosztuje-strona-internetowa/index.html">Ile kosztuje strona internetowa dla firmy w 2026 roku?</a></h3>
+          <div class="post__foot">
+            <time datetime="2026-09-28">28 September 2026</time>
+            <span class="sep"></span>
+            <span>9 min</span>
+            <a class="post__go" href="../ile-kosztuje-strona-internetowa/index.html">Czytaj <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="post" data-cats="seo poradniki">
+        <a class="post__media" href="../seo-od-czego-zaczac/index.html" tabindex="-1" aria-hidden="true">
+          <img src="../assets/cover-seo-napoczatek.svg" width="1200" height="630" loading="lazy" decoding="async" alt="SEO strony internetowej — od czego zacząć?">
+        </a>
+        <div class="post__body">
+          <div class="tags"><span class="tag" style="font-size:.76rem;font-weight:600;padding:.32rem .65rem;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)">SEO</span></div>
+          <h3 class="post__title"><a href="../seo-od-czego-zaczac/index.html">SEO strony internetowej — od czego zacząć?</a></h3>
+          <div class="post__foot">
+            <time datetime="2026-09-07">7 September 2026</time>
+            <span class="sep"></span>
+            <span>8 min</span>
+            <a class="post__go" href="../seo-od-czego-zaczac/index.html">Czytaj <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="post" data-cats="poradniki strony-internetowe">
+        <a class="post__media" href="../jak-wybrac-wykonawce-strony/index.html" tabindex="-1" aria-hidden="true">
+          <img src="../assets/cover-jak-wybrac-wykonawce.svg" width="1200" height="630" loading="lazy" decoding="async" alt="Jak wybrać wykonawcę strony internetowej?">
+        </a>
+        <div class="post__body">
+          <div class="tags"><span class="tag" style="font-size:.76rem;font-weight:600;padding:.32rem .65rem;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)">Poradniki</span></div>
+          <h3 class="post__title"><a href="../jak-wybrac-wykonawce-strony/index.html">Jak wybrać wykonawcę strony internetowej dla firmy?</a></h3>
+          <div class="post__foot">
+            <time datetime="2026-08-30">30 August 2026</time>
+            <span class="sep"></span>
+            <span>6 min</span>
+            <a class="post__go" href="../jak-wybrac-wykonawce-strony/index.html">Czytaj <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+
+      <div class="footer__brand">
+        <a class="logo" href="../../index.html" aria-label="REWORK">
+          <img class="logo__image" src="../../img/reworklogo.webp" loading="lazy" alt="REWORK">
+          <span class="logo__word">REWORK</span>
+        </a>
+        <p class="footer__tag">WEB • ADS • SOCIAL</p>
+        <p class="footer__desc">Strony internetowe, Google Ads, Meta Ads, social media i short-form video — jeden system pozyskiwania klientów dla Twojej firmy.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Strony internetowe według obszaru">
+        <h4>Obszar</h4>
+        <ul>
+          <li><a href="../../strony-internetowe-krakow.html">Strony internetowe Kraków</a></li>
+          <li><a href="../../strony-internetowe-wadowice.html">Strony internetowe Wadowice</a></li>
+          <li><a href="../../strony-internetowe-warszawa.html">Strony internetowe Warszawa</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Usługi w stopce">
+        <h4>Usługi</h4>
+        <ul>
+          <li><a href="../../sklepy-internetowe.html">Sklepy internetowe</a></li>
+          <li><a href="../../kampanie-google-ads.html">Kampanie Google Ads</a></li>
+          <li><a href="../../audyt-stron-www.html">Audyt stron WWW</a></li>
+          <li><a href="../index.html">Blog</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Strony internetowe według branży">
+        <h4>Branże</h4>
+        <ul>
+          <li><a href="../../strony-dla-deweloperow.html">Strony dla deweloperów</a></li>
+          <li><a href="../../strony-dla-kancelarii-prawnych.html">Strony dla kancelarii prawnych</a></li>
+          <li><a href="../../strony-dla-firm-budowlanych.html">Strony dla firm budowlanych</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:karwys08@gmail.com">karwys08@gmail.com</a></li>
+          <li><a href="tel:577594266">577594266</a></li>
+          <li><span>Kraków, Oświęcim, Kalwaria Zebrzydowska, Bielsko-Biała, Wadowice</span></li>
+        </ul>
+        <ul class="footer__social" style="margin-top:1.1rem">
+          <li><a href="https://www.instagram.com/reworkagency.pl?stkn=dzY3ZjMzN2hkMTNp&utm_source=qr" target="_blank" rel="noopener">Instagram <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+          <li><a href="https://www.facebook.com/share/17uAzSNZjy?mibextid=wwXlfr" target="_blank" rel="noopener">Facebook <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+          <li><a href="https://www.tiktok.com/@reworkit.pl?_r=1&_t=ZN-99cd1R6NONS" target="_blank" rel="noopener">TikTok <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> REWORK. Wszelkie prawa zastrzeżone.</p>
+      <div class="footer__meta">
+        <p>Tworzenie stron internetowych • Google Ads • Meta Ads • Social media • Marketing internetowy</p>
+        <a href="../../polityka-prywatnosci.html" style="font-weight:600;text-decoration:underline;text-underline-offset:3px">Polityka prywatności</a>
+        <button class="cookie-settings" id="cookie-settings" type="button">Ustawienia cookies</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Zgoda na pliki cookies">
+  <div class="container cookie-banner__inner">
+    <div class="cookie-banner__content">
+      <h3>Ta strona używa plików cookies</h3>
+      <p>Wykorzystujemy je do działania strony, poprawy komfortu użytkowania i analityki. Możesz zaakceptować wszystkie, odrzucić niezbędne lub zmienić wybór w dowolnym momencie. <a href="../../polityka-prywatnosci.html">Polityka prywatności</a>.</p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="btn btn--ghost btn--sm" type="button" data-cookie="essential">Tylko niezbędne</button>
+      <button class="btn btn--ghost btn--sm" type="button" data-cookie="reject">Odrzuć</button>
+      <button class="btn btn--primary btn--sm" type="button" data-cookie="accept">Akceptuję</button>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/main.js" defer></script>
+<script src="../js/blog.js" defer></script>
+</body>
+</html>
