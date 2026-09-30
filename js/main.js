@@ -13,7 +13,8 @@
         'https://formspree.io/f/xxxxxxx'  → wysyłka przez fetch (JSON), bez serwera po Twojej stronie.
      3) Własny backend (PHP/Node) przyjmujący JSON.
   */
-  const FORM_ENDPOINT = 'a622411b-37c7-45ca-ba03-9e9901b87e90';
+  const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+  const WEB3FORMS_KEY = 'a622411b-37c7-45ca-ba03-9e9901b87e90';
   const CONTACT_EMAIL = 'karwys08@gmail.com';
 
   const $ = (s, c = document) => c.querySelector(s);
@@ -279,13 +280,19 @@
     };
 
     const sendViaEndpoint = async data => {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ ...data, _subject: `Nowe zapytanie: ${data.service} — ${data.name}` })
-      });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-    };
+  const res = await fetch(FORM_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      access_key: WEB3FORMS_KEY,
+      subject: `Nowe zapytanie: ${data.service} — ${data.name}`,
+      from_name: 'REWORK — formularz',
+      ...data
+    })
+  });
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok || !json.success) throw new Error(json.message || 'HTTP ' + res.status);
+};
 
     const sendViaMailto = data => new Promise(resolve => {
       const subject = `Zapytanie ze strony REWORK — ${data.service}`;
