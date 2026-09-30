@@ -343,9 +343,18 @@
   const cookieSettings = $('#cookie-settings');
 
   const setCookiePreference = value => {
-    try { localStorage.setItem(COOKIE_KEY, value); } catch (err) { console.warn('Cookie save failed:', err); }
-    cookieBanner?.classList.remove('is-visible');
-  };
+  try { localStorage.setItem(COOKIE_KEY, value); } catch (err) { console.warn('Cookie save failed:', err); }
+  const state = value === 'accept' ? 'granted' : 'denied';
+  if (typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', {
+      ad_storage: state,
+      ad_user_data: state,
+      ad_personalization: state,
+      analytics_storage: state
+    });
+  }
+  cookieBanner?.classList.remove('is-visible');
+};
 
   const showCookieBanner = () => {
     if (!cookieBanner) return;
