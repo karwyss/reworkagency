@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.reworkagency.pl/sitemap.xml
+Sitemap: https://reworkagency.pl/sitemap.xml
