@@ -11,8 +11,25 @@
       sc.src = 'https://www.googletagmanager.com/gtag/js?id=G-25N504MHB2';
       document.head.appendChild(sc);
     }
-    gtag('js', new Date());
-    gtag('config', 'G-25N504MHB2');
+    gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  wait_for_update: 500
+});
+try {
+  if (localStorage.getItem('rework-cookie-consent') === 'accept') {
+    gtag('consent', 'update', {
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    });
+  }
+} catch (e) {}
+gtag('js', new Date());
+gtag('config', 'G-25N504MHB2');
     (function(){
       var done = false;
       function fire(){
