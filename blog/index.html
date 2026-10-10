@@ -12,24 +12,24 @@
       document.head.appendChild(sc);
     }
     gtag('consent', 'default', {
-  ad_storage: 'denied',
-  ad_user_data: 'denied',
-  ad_personalization: 'denied',
-  analytics_storage: 'denied',
-  wait_for_update: 500
-});
-try {
-  if (localStorage.getItem('rework-cookie-consent') === 'accept') {
-    gtag('consent', 'update', {
-      ad_storage: 'granted',
-      ad_user_data: 'granted',
-      ad_personalization: 'granted',
-      analytics_storage: 'granted'
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
     });
-  }
-} catch (e) {}
-gtag('js', new Date());
-gtag('config', 'G-25N504MHB2');
+    try {
+      if (localStorage.getItem('rework-cookie-consent') === 'accept') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'G-25N504MHB2');
     (function(){
       var done = false;
       function fire(){
@@ -47,8 +47,8 @@ gtag('config', 'G-25N504MHB2');
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-  <title>Blog REWORK — Strony internetowe, SEO, Google Ads i marketing</title>
-  <meta name="description" content="Praktyczne artykuły o stronach internetowych, SEO, reklamie i marketingu dla firm. Wiedza, która pomaga rozwijać firmę online — bez lania wody.">
+  <title>Blog REWORK — Strony internetowe, SEO, Google Ads i marketing dla firm</title>
+  <meta name="description" content="Praktyczne poradniki o stronach internetowych, SEO, reklamie w Google i marketingu. Wiedza, która pomaga małym i średnim firmom pozyskiwać klientów online.">
   <link rel="canonical" href="https://reworkagency.pl/blog/">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <script>document.documentElement.classList.add('js')</script>
@@ -64,14 +64,14 @@ gtag('config', 'G-25N504MHB2');
   <meta property="og:site_name" content="REWORK">
   <meta property="og:url" content="https://reworkagency.pl/blog/">
   <meta property="og:title" content="Blog REWORK — wiedza, która pomaga rozwijać firmę online">
-  <meta property="og:description" content="Praktyczne artykuły o stronach internetowych, SEO, reklamie i marketingu dla firm.">
+  <meta property="og:description" content="Praktyczne poradniki o stronach internetowych, SEO, reklamie i marketingu dla firm.">
   <meta property="og:image" content="https://reworkagency.pl/img/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="REWORK — WEB • ADS • SOCIAL">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Blog REWORK — wiedza, która pomaga rozwijać firmę online">
-  <meta name="twitter:description" content="Praktyczne artykuły o stronach internetowych, SEO, reklamie i marketingu dla firm.">
+  <meta name="twitter:description" content="Praktyczne poradniki o stronach internetowych, SEO, reklamie i marketingu dla firm.">
   <meta name="twitter:image" content="https://reworkagency.pl/img/og.jpg">
 
   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
@@ -119,13 +119,8 @@ gtag('config', 'G-25N504MHB2');
     @media (max-width:640px){body{font-size:1rem}}
   </style>
 
-  <link rel="preload" href="../css/style.css" as="style">
-  <link rel="stylesheet" href="../css/style.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="../css/style.css"></noscript>
-
-  <link rel="preload" href="css/blog.css" as="style">
-  <link rel="stylesheet" href="css/blog.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/blog.css"></noscript>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -134,7 +129,7 @@ gtag('config', 'G-25N504MHB2');
   "@type": "Blog",
   "@id": "https://reworkagency.pl/blog/#blog",
   "name": "Blog REWORK",
-  "description": "Praktyczne artykuły o stronach internetowych, SEO, reklamie i marketingu dla firm.",
+  "description": "Praktyczne poradniki o stronach internetowych, SEO, reklamie w Google i marketingu dla firm.",
   "url": "https://reworkagency.pl/blog/",
   "inLanguage": "pl-PL",
   "publisher": {
@@ -142,7 +137,15 @@ gtag('config', 'G-25N504MHB2');
     "name": "REWORK",
     "url": "https://reworkagency.pl/",
     "logo": { "@type": "ImageObject", "url": "https://reworkagency.pl/img/apple-touch-icon.png" }
-  }
+  },
+  "blogPost": [
+    { "@type": "BlogPosting", "url": "https://reworkagency.pl/blog/ile-kosztuje-strona-internetowa/" },
+    { "@type": "BlogPosting", "url": "https://reworkagency.pl/blog/co-powinna-zawierac-strona-firmy/" },
+    { "@type": "BlogPosting", "url": "https://reworkagency.pl/blog/bledy-strony-firmy/" },
+    { "@type": "BlogPosting", "url": "https://reworkagency.pl/blog/seo-od-czego-zaczac/" },
+    { "@type": "BlogPosting", "url": "https://reworkagency.pl/blog/jak-wybrac-wykonawce-strony/" },
+    { "@type": "BlogPosting", "url": "https://reworkagency.pl/blog/sklep-internetowy-ile-kosztuje/" }
+  ]
 }
   </script>
 </head>
@@ -184,84 +187,85 @@ gtag('config', 'G-25N504MHB2');
 
 <main id="main">
 
-<!-- ============ BLOG HEADER ============ -->
+<!-- ============ HERO BLOGA ============ -->
 <section class="blog-head" aria-labelledby="blog-title">
-  <div class="blog-head__bg" aria-hidden="true">
-    <div class="orb orb--a"></div>
-    <div class="orb orb--b"></div>
-  </div>
+  <div class="orb orb--a" aria-hidden="true"></div>
+  <div class="orb orb--b" aria-hidden="true"></div>
+
   <div class="container blog-head__inner">
-    <p class="eyebrow hero__eyebrow">BLOG REWORK</p>
-    <h1 class="blog-head__title" id="blog-title">Wiedza, która pomaga rozwijać <em>firmę online.</em></h1>
-    <p class="blog-head__lead">Praktyczne artykuły o stronach internetowych, SEO, reklamie i marketingu dla firm. Bez lania wody — tylko rzeczy, które naprawdę mają znaczenie w Twoim biznesie.</p>
-    <ul class="blog-head__meta">
-      <li>6 artykułów na start</li>
-      <li>Nowe wpisy co tydzień</li>
-      <li>Zrozumiały język, konkretne przykłady</li>
-    </ul>
+    <div>
+      <p class="eyebrow">Blog REWORK</p>
+      <h1 class="blog-head__title" id="blog-title">Wiedza, która pomaga rozwijać firmę <em>online</em>.</h1>
+      <p class="blog-head__lead">Praktyczne poradniki o stronach internetowych, SEO, reklamie w Google i marketingu. Bez lania wody — to, co realnie buduje firmę, nie bibeloty.</p>
+      <ul class="blog-head__meta">
+        <li>6 poradników</li>
+        <li>Nowy wpis co tydzień</li>
+        <li>Darmowe rozwiązania</li>
+      </ul>
+    </div>
+
+    <aside class="blog-head__panel" aria-label="O czym piszę">
+      <h2>O czym jest ten blog</h2>
+      <ul>
+        <li><b>Strony www i sklepy</b> — ile kosztują, co zawierają, jak je oceniać</li>
+        <li><b>SEO i Google Ads</b> — pozyskiwanie klientów z wyszukiwarki</li>
+        <li><b>Wybór wykonawcy</b> — jak nie stracić pieniędzy i czasu</li>
+      </ul>
+    </aside>
   </div>
 </section>
 
 <!-- ============ WYRÓŻNIONY ARTYKUŁ ============ -->
-<section class="section featured" aria-labelledby="featured-title">
+<section class="section" aria-labelledby="featured-title" style="padding-top:var(--gutter)">
   <div class="container">
-    <div class="section__head section__head--row">
-      <div>
-        <p class="eyebrow">Wyróżniony artykuł</p>
-        <h2 class="h2" id="featured-title">Od czego zacząć?</h2>
-      </div>
-      <p class="section__lead">Najczęściej czytany temat — bo dotyka pytania, które słyszymy od właścicieli firm najczęściej.</p>
-    </div>
-
-    <article class="featured__card" data-cats="strony-internetowe poradniki">
+    <article class="featured__card">
       <a class="featured__media" href="ile-kosztuje-strona-internetowa/index.html" tabindex="-1" aria-hidden="true">
-        <img src="assets/cover-ile-kosztuje-strona.svg" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async" alt="Ile kosztuje strona internetowa dla firmy w 2026 roku?">
+        <img src="assets/cover-ile-kosztuje-strona.svg" width="1200" height="630" loading="eager" decoding="async" alt="Ile kosztuje strona internetowa? Cennik i ukryte koszty u deweloperów">
       </a>
       <div class="featured__body">
-        <div class="tags"><span class="tag" style="font-size:.76rem;font-weight:600;padding:.32rem .65rem;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)">Strony internetowe</span></div>
-        <h3 class="featured__title"><a href="ile-kosztuje-strona-internetowa/index.html">Ile kosztuje strona internetowa dla firmy w 2026 roku?</a></h3>
-        <p class="featured__text">Rozkładamy budżet na czynniki pierwsze: ile naprawdę kosztuje dobra strona, czemu „tanie" z reguły wychodzi drożej, i na co zwrócić uwagę, żeby nie przepłacić.</p>
-        <div class="featured__foot">
-          <span>28 September 2026</span>
+        <div class="tags"><span class="tag">Wyróżnione</span><span class="tag">Strony internetowe</span></div>
+        <h2 class="featured__title" id="featured-title"><a href="ile-kosztuje-strona-internetowa/index.html">Ile kosztuje strona internetowa? Cennik i ukryte koszty u deweloperów</a></h2>
+        <p class="featured__text">Rozkładamy budżet na czynniki pierwsze: skąd biorą się widełki 1500–15 000 zł, dlaczego „tanie" realizacje wychodzą drożej i za co naprawdę płacisz.</p>
+        <div class="featured__row">
+          <time datetime="2026-09-28">28 September 2026</time>
           <span class="sep"></span>
           <span>9 min czytania</span>
-          <a class="post__go" href="ile-kosztuje-strona-internetowa/index.html">Czytaj artykuł <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
         </div>
+        <a class="featured__cta" href="ile-kosztuje-strona-internetowa/index.html">Czytaj artykuł <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
       </div>
     </article>
   </div>
 </section>
 
-<!-- ============ NAJNOWSZE ARTYKUŁY ============ -->
+<!-- ============ NAJNOWSZE ARTYKUŁY + FILTRY ============ -->
 <section class="section" aria-labelledby="posts-title">
   <div class="container">
-    <div class="section__head section__head--row">
-      <div>
-        <p class="eyebrow">Archiwum</p>
-        <h2 class="h2" id="posts-title">Najnowsze artykuły</h2>
-      </div>
-      <div class="filters" role="group" aria-label="Filtruj artykuły po kategorii">
-        <button type="button" data-filter="wszystkie" class="is-active">Wszystkie</button>
-        <button type="button" data-filter="strony-internetowe">Strony internetowe</button>
-        <button type="button" data-filter="sklepy-internetowe">Sklepy internetowe</button>
-        <button type="button" data-filter="seo">SEO</button>
-        <button type="button" data-filter="google-ads">Google Ads</button>
-        <button type="button" data-filter="marketing">Marketing</button>
-        <button type="button" data-filter="web-design">Web Design</button>
-        <button type="button" data-filter="poradniki">Poradniki</button>
-      </div>
+    <div class="section__head">
+      <p class="eyebrow">Najnowsze wpisy</p>
+      <h2 class="h2" id="posts-title">Wszystkie artykuły</h2>
     </div>
 
-    <div class="posts">
+    <div class="filters" role="group" aria-label="Filtruj artykuły według kategorii">
+      <button type="button" data-filter="wszystkie" class="is-active">Wszystkie</button>
+      <button type="button" data-filter="strony-internetowe">Strony internetowe</button>
+      <button type="button" data-filter="sklepy-internetowe">Sklepy internetowe</button>
+      <button type="button" data-filter="seo">SEO</button>
+      <button type="button" data-filter="poradniki">Poradniki</button>
+      <button type="button" data-filter="web-design">Web design</button>
+      <button type="button" data-filter="marketing">Marketing</button>
+      <button type="button" data-filter="google-ads">Google Ads</button>
+    </div>
+
+    <div class="posts" id="posts" style="margin-top:2rem">
 
       <article class="post" data-cats="strony-internetowe web-design">
         <a class="post__media" href="co-powinna-zawierac-strona-firmy/index.html" tabindex="-1" aria-hidden="true">
-          <img src="assets/cover-co-powinna-zawierac.svg" width="1200" height="630" loading="lazy" decoding="async" alt="Strona internetowa firmy — co powinna zawierać?">
+          <img src="assets/cover-co-powinna-zawierac.svg" width="1200" height="630" loading="lazy" decoding="async" alt="Co powinna zawierać nowoczesna strona internetowa firmy w 2026 roku?">
         </a>
         <div class="post__body">
-          <div class="tags"><span class="tag" style="font-size:.76rem;font-weight:600;padding:.32rem .65rem;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)">Strony internetowe</span></div>
-          <h3 class="post__title"><a href="co-powinna-zawierac-strona-firmy/index.html">Strona internetowa dla firmy — co powinna zawierać?</a></h3>
-          <p class="post__text">Strona firmowa to nie portfolio. Sprawdzona lista sekcji, treści i elementów, które zamieniają odwiedzającego w zapytanie o ofertę.</p>
+          <div class="tags"><span class="tag">Web design</span></div>
+          <h3 class="post__title"><a href="co-powinna-zawierac-strona-firmy/index.html">Co powinna zawierać nowoczesna strona internetowa firmy w 2026 roku?</a></h3>
+          <p class="post__text">Szkielet skutecznej strony: treści, sekcje i detale UX, które zamieniają odwiedzającego w zapytanie o ofertę.</p>
           <div class="post__foot">
             <time datetime="2026-09-21">21 September 2026</time>
             <span class="sep"></span>
@@ -273,12 +277,12 @@ gtag('config', 'G-25N504MHB2');
 
       <article class="post" data-cats="strony-internetowe marketing">
         <a class="post__media" href="bledy-strony-firmy/index.html" tabindex="-1" aria-hidden="true">
-          <img src="assets/cover-bledy-strony.svg" width="1200" height="630" loading="lazy" decoding="async" alt="5 błędów, przez które strona firmy nie generuje klientów">
+          <img src="assets/cover-bledy-strony.svg" width="1200" height="630" loading="lazy" decoding="async" alt="Błędy strony firmy, które odstraszają klientów">
         </a>
         <div class="post__body">
-          <div class="tags"><span class="tag" style="font-size:.76rem;font-weight:600;padding:.32rem .65rem;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)">Marketing</span></div>
-          <h3 class="post__title"><a href="bledy-strony-firmy/index.html">5 błędów, przez które strona firmy nie generuje klientów</a></h3>
-          <p class="post__text">Strona działa, a zapytań brak? Sprawdź, czy popełniasz któryś z tych pięciu typowych błędów i co zrobić z każdym z nich.</p>
+          <div class="tags"><span class="tag">Marketing</span></div>
+          <h3 class="post__title"><a href="bledy-strony-firmy/index.html">Błędy strony firmy, które odstraszają klientów (i jak je naprawić)</a></h3>
+          <p class="post__text">Strona działa, a zapytań brak? 5 najczęstszych przyczyn i konkretne poprawki — w większości darmowe.</p>
           <div class="post__foot">
             <time datetime="2026-09-14">14 September 2026</time>
             <span class="sep"></span>
@@ -290,12 +294,12 @@ gtag('config', 'G-25N504MHB2');
 
       <article class="post" data-cats="seo poradniki">
         <a class="post__media" href="seo-od-czego-zaczac/index.html" tabindex="-1" aria-hidden="true">
-          <img src="assets/cover-seo-napoczatek.svg" width="1200" height="630" loading="lazy" decoding="async" alt="SEO strony internetowej — od czego zacząć?">
+          <img src="assets/seo_odczegozaczac.jpg" width="1200" height="630" loading="lazy" decoding="async" alt="SEO od czego zacząć? Poradnik dla właścicieli firm lokalnych">
         </a>
         <div class="post__body">
-          <div class="tags"><span class="tag" style="font-size:.76rem;font-weight:600;padding:.32rem .65rem;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)">SEO</span></div>
-          <h3 class="post__title"><a href="seo-od-czego-zaczac/index.html">SEO strony internetowej — od czego zacząć?</a></h3>
-          <p class="post__text">SEO brzmi jak czarna magia, ale zaczyna się od rzeczy prostych. Plan działania na pierwsze tygodnie — krok po kroku.</p>
+          <div class="tags"><span class="tag">SEO</span></div>
+          <h3 class="post__title"><a href="seo-od-czego-zaczac/index.html">SEO od czego zacząć? Poradnik dla właścicieli firm lokalnych</a></h3>
+          <p class="post__text">Plan na pierwsze 30 dni: wizytówka Google, opinie, spójne dane i strona — bez budżetu na agencję.</p>
           <div class="post__foot">
             <time datetime="2026-09-07">7 September 2026</time>
             <span class="sep"></span>
@@ -307,12 +311,12 @@ gtag('config', 'G-25N504MHB2');
 
       <article class="post" data-cats="poradniki strony-internetowe">
         <a class="post__media" href="jak-wybrac-wykonawce-strony/index.html" tabindex="-1" aria-hidden="true">
-          <img src="assets/cover-jak-wybrac-wykonawce.svg" width="1200" height="630" loading="lazy" decoding="async" alt="Jak wybrać wykonawcę strony internetowej?">
+          <img src="assets/cover-jak-wybrac-wykonawce.svg" width="1200" height="630" loading="lazy" decoding="async" alt="Jak wybrać rzetelnego wykonawcę strony internetowej i nie stracić pieniędzy">
         </a>
         <div class="post__body">
-          <div class="tags"><span class="tag" style="font-size:.76rem;font-weight:600;padding:.32rem .65rem;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)">Poradniki</span></div>
-          <h3 class="post__title"><a href="jak-wybrac-wykonawce-strony/index.html">Jak wybrać wykonawcę strony internetowej dla firmy?</a></h3>
-          <p class="post__text">Człowiek „od strony", agencja czy gotowy kreator? Na co patrzeć w ofertach i jakich pytań nie pominąć przed podpisaniem umowy.</p>
+          <div class="tags"><span class="tag">Poradniki</span></div>
+          <h3 class="post__title"><a href="jak-wybrac-wykonawce-strony/index.html">Jak wybrać rzetelnego wykonawcę strony internetowej i nie stracić pieniędzy?</a></h3>
+          <p class="post__text">Wolny strzelec, agencja czy kreator? Na co patrzeć w ofertach i jakie pytania zadać przed podpisaniem.</p>
           <div class="post__foot">
             <time datetime="2026-08-30">30 August 2026</time>
             <span class="sep"></span>
@@ -324,12 +328,12 @@ gtag('config', 'G-25N504MHB2');
 
       <article class="post" data-cats="sklepy-internetowe poradniki">
         <a class="post__media" href="sklep-internetowy-ile-kosztuje/index.html" tabindex="-1" aria-hidden="true">
-          <img src="assets/cover-sklep-internetowy.svg" width="1200" height="630" loading="lazy" decoding="async" alt="Sklep internetowy — ile kosztuje jego stworzenie?">
+          <img src="assets/cover-sklep-internetowy.svg" width="1200" height="630" loading="lazy" decoding="async" alt="Sklep internetowy — ile kosztuje i co jest w cenie?">
         </a>
         <div class="post__body">
-          <div class="tags"><span class="tag" style="font-size:.76rem;font-weight:600;padding:.32rem .65rem;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)">Sklepy internetowe</span></div>
-          <h3 class="post__title"><a href="sklep-internetowy-ile-kosztuje/index.html">Sklep internetowy — ile kosztuje jego stworzenie?</a></h3>
-          <p class="post__text">Od gotowych platform po sklepy szyte na miarę. Realne widełki kosztów, co wchodzi w cenę, a za co zapłacisz osobno.</p>
+          <div class="tags"><span class="tag">Sklepy internetowe</span></div>
+          <h3 class="post__title"><a href="sklep-internetowy-ile-kosztuje/index.html">Sklep internetowy — ile kosztuje i co jest w cenie?</a></h3>
+          <p class="post__text">Realne widełki: platformy SaaS, open source i sklepy szyte na miarę. Plus lista rzeczy, o których firmy zapominają w budżecie.</p>
           <div class="post__foot">
             <time datetime="2026-08-23">23 August 2026</time>
             <span class="sep"></span>
@@ -341,18 +345,24 @@ gtag('config', 'G-25N504MHB2');
 
     </div>
 
-    <div class="posts-empty">W tej kategorii nie ma jeszcze artykułów. Zajrzyj wkrótce.</div>
+    <p class="posts-empty" id="posts-empty">W tej kategorii nie ma jeszcze artykułów. Wróć wkrótce — dodajemy nowe wpisy co tydzień.</p>
   </div>
 </section>
 
-<!-- ============ OSTATNIE CTA ============ -->
-<section class="section" aria-labelledby="final-title">
+<!-- ============ CTA ============ -->
+<section class="section" aria-labelledby="blog-cta-title">
   <div class="container">
     <div class="article-cta">
-      <h2 id="final-title">Potrzebujesz strony internetowej dla swojej firmy?</h2>
-      <p>Opowiedz nam o swoim projekcie — przygotujemy indywidualną wycenę.</p>
-      <a class="btn btn--primary btn--lg" href="../index.html#kontakt">Poproś o wycenę <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
-      <p class="cta-note">Odpowiadam osobiście, zwykle w ciągu jednego dnia.</p>
+      <p class="eyebrow" style="color:rgba(255,255,255,.6);margin-bottom:1rem">Twój projekt</p>
+      <h2 id="blog-cta-title">Potrzebujesz strony, która faktycznie <em>przynosi klientów?</em></h2>
+      <p>Perspektywa analityka i copywritera, a nie samego „programisty". Opisz, czego potrzebujesz, a otrzymasz konkretną wycenę — bez zobowiązań.</p>
+      <div class="featured__row" style="color:rgba(255,255,255,.8);font-size:.95rem;margin-top:1.4rem">
+        <span>✓ Darmowa wycena w 24 h</span>
+        <span>✓ Bez zobowiązań</span>
+        <span>✓ Odpowiedź po ludzku</span>
+      </div>
+      <a class="btn btn--primary btn--lg" href="../index.html#kontakt" data-track="wycena">Poproś o darmową wycenę <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
+      <p class="cta-note">Karol — REWORK. Odpowiadam osobiście w ciągu 24 godzin.</p>
     </div>
   </div>
 </section>
