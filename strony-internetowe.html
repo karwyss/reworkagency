@@ -4,6 +4,8 @@
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18486694877"></script>
 <script>
+
+  
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -52,6 +54,20 @@ gtag('config', 'G-25N504MHB2');
       });
       setTimeout(fire, 3500);
     })();
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18486694877/IPE2CI-IppkdEN2nku9E',
+      'event_callback': callback
+  });
+  return false;
+}
+
+
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -287,7 +303,7 @@ gtag('config', 'G-25N504MHB2');
     </nav>
 
     <div class="nav__actions">
-      <a class="btn btn--ghost nav__call" href="tel:577594266" data-track="tel">Zadzwoń <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.7 2.5h2a.6.6 0 0 1 .6.6l.6 2.1a.6.6 0 0 1-.3.7L5 7.2a9.5 9.5 0 0 0 3.8 3.8l1.3-1.6a.6.6 0 0 1 .7-.3l2.1.6a.6.6 0 0 1 .6.6v1.9a1.6 1.6 0 0 1-1.8 1.6C8 13.5 2.5 8 2 4.3a1.6 1.6 0 0 1 1.7-1.8Z"/></svg></a>
+      <a class="btn btn--ghost nav__call" href="tel:577594266" data-track="tel" onclick="return gtag_report_conversion('tel:577594266');">Zadzwoń <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.7 2.5h2a.6.6 0 0 1 .6.6l.6 2.1a.6.6 0 0 1-.3.7L5 7.2a9.5 9.5 0 0 0 3.8 3.8l1.3-1.6a.6.6 0 0 1 .7-.3l2.1.6a.6.6 0 0 1 .6.6v1.9a1.6 1.6 0 0 1-1.8 1.6C8 13.5 2.5 8 2 4.3a1.6 1.6 0 0 1 1.7-1.8Z"/></svg></a>
       <a class="btn btn--primary nav__cta" href="#kontakt" data-track="wycena">Poproś o wycenę <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
       <button class="burger" type="button" aria-label="Otwórz menu" aria-controls="menu" aria-expanded="false">
         <span></span><span></span>
@@ -784,7 +800,7 @@ gtag('config', 'G-25N504MHB2');
     <h2 class="final__title" id="final-title">Twoja firma zasługuje na stronę, która <em>pracuje</em> na kontakty.</h2>
     <p class="final__text">Napisz albo zadzwoń. W 24h dostaniesz odpowiedź z konkretną propozycją zakresu i wyceny.</p>
     <a class="btn btn--primary btn--xl" href="#kontakt" data-track="wycena">Poproś o bezpłatną wycenę <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
-    <a class="final__phone" href="tel:577594266" data-track="telefon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>577 594 266</a>
+    <a class="final__phone" href="tel:577594266" data-track="telefon" onclick="return gtag_report_conversion('tel:577594266');"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>577 594 266</a>
   </div>
 </section>
 
@@ -804,7 +820,7 @@ gtag('config', 'G-25N504MHB2');
 
       <address class="contact__info">
         <a href="mailto:karwys08@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 8 9 6 9-6"/></svg>karwys08@gmail.com</a>
-        <a href="tel:577594266" data-track="telefon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>577 594 266</a>
+        <a href="tel:577594266" data-track="telefon" onclick="return gtag_report_conversion('tel:577594266');"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>577 594 266</a>
         <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Pracuję zdalnie, realizacje w całej Polsce</span>
       </address>
     </div>
@@ -942,7 +958,7 @@ gtag('config', 'G-25N504MHB2');
         <h4>Kontakt</h4>
         <ul>
           <li><a href="mailto:karwys08@gmail.com">karwys08@gmail.com</a></li>
-          <li><a href="tel:577594266">577 594 266</a></li>
+          <li><a href="tel:577594266" onclick="return gtag_report_conversion('tel:577594266');">577 594 266</a></li>
           <li><span>Kraków, Oświęcim, Kalwaria Zebrzydowska, Bielsko-Biała, Wadowice</span></li>
         </ul>
         <ul class="footer__social" style="margin-top:1.1rem">
