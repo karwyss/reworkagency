@@ -289,10 +289,10 @@ function gtag_report_conversion(url) {
       <ul>
         <li><a href="#co-otrzymujesz">Co otrzymujesz</a></li>
         <li><a href="#realizacje">Realizacje</a></li>
-        <li><a href="blog/">Blog</a></li>
-        <li><a href="#opinie">Opinie</a></li>
+        <!-- <li><a href="blog/">Blog</a></li> -->
+        <!-- <li><a href="#opinie">Opinie</a></li> -->
         <li><a href="#cennik">Cennik</a></li>
-        <li><a href="#proces">Proces</a></li>
+        <!-- <li><a href="#proces">Proces</a></li> -->
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <div class="nav__menu-foot">
@@ -326,13 +326,13 @@ function gtag_report_conversion(url) {
     <div class="hero__copy">
       <p class="eyebrow hero__eyebrow"><span class="dot"></span>Strony internetowe dla firm</p>
       <h1 class="hero__title" id="hero-title">Strona internetowa, która robi dobre <em>pierwsze wrażenie.</em></h1>
-      <p class="hero__lead">Nowoczesny layout, czytelna oferta i prosty kontakt. Projektuję i wdrażam strony, które wyglądają dobrze i prowadzą ruch do zapytania — dopasowane do Twojej firmy.</p>
-      <p class="lp-price">Strony internetowe <strong>od 1490 zł</strong></p>
+      <p class="hero__lead">Nowoczesny layout, czytelna oferta i prosty kontakt. Projektuję i wdrażam strony, które wyglądają dobrze i prowadzą ruch do zapytania - dopasowane do Twojej firmy.</p>
+      <p class="lp-price">Strony internetowe <strong>od 1490 zł</strong></p> <p class="lp-price">Wycena <strong>w 24 h</strong>, bez ukrytych kosztów</p>
       <div class="hero__cta">
         <a class="btn btn--primary btn--lg" href="#kontakt" data-track="wycena">Poproś o bezpłatną wycenę <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
         <a class="btn btn--ghost btn--lg" href="#realizacje" data-track="realizacje">Zobacz realizacje</a>
       </div>
-      <p class="cta-note">Bezpłatna wycena w 24h</p>
+      <p class="cta-note">Bez zobowiązań. Odpowiadam osobiście, zwykle tego samego dnia.</p>
       <ul class="hero__notes" aria-label="Co dostajesz">
         <li>Indywidualny projekt</li>
         <li>Responsywność</li>
@@ -341,23 +341,74 @@ function gtag_report_conversion(url) {
     </div>
 
     <div class="hero__visual" aria-hidden="true">
-      <div class="stage stage--landing">
+      <div class="stage">
         <div class="browser stage__browser" data-depth="10">
-          <div class="browser__bar"><i></i><i></i><i></i><span class="browser__url">https://www.reworkagency.pl</span></div>
-          <img class="stage__shot" src="img/adm1.jpg" alt="Przykład zrealizowanej strony internetowej admic-garage.pl" width="520" height="572" loading="eager" decoding="async" fetchpriority="high">
+          <div class="browser__bar"><i></i><i></i><i></i><span class="browser__url">https://reworkagency.pl</span></div>
+          <div class="site site--rework">
+            <div class="site__nav"><b>REWORK</b><span></span><span></span><span></span><em>Kontakt</em></div>
+            <div class="site__hero">
+              <div class="site__copy">
+                <small>WEB • ADS • SOCIAL</small>
+                <p class="site__title">Marketing, który prowadzi do kontaktu.</p>
+                <p></p><p></p>
+                <div class="site__btns"><em>Zobacz ofertę</em><i>Porozmawiajmy</i></div>
+              </div>
+              <div class="site__img">
+                <picture>
+                  <source srcset="img/reworklogo-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                  <img src="img/reworklogo.webp" alt="REWORK — logo marki" width="480" height="528" fetchpriority="high" decoding="async">
+                </picture>
+              </div>
+            </div>
+            <div class="site__row"><i></i><i></i><i></i></div>
+          </div>
         </div>
 
-        <div class="lp-chip stage__chip-a" data-depth="26">
-          <span class="lp-chip__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
-          <div><b>Responsywność</b><small>Telefon • tablet • desktop</small></div>
+        <div class="fcard fcard--ads stage__ads" data-depth="26">
+          <div class="fcard__head">
+            <span class="fcard__logo fcard__logo--g">G</span>
+            <div><b>Google Ads</b><small>Kampania • Wyszukiwarka</small></div>
+            <span class="pill pill--live"><i></i>Aktywna</span>
+          </div>
+          <svg class="chart" viewBox="0 0 260 90" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="cg" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#0878F9" stop-opacity=".45"/>
+                <stop offset="1" stop-color="#0878F9" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path class="chart__area" d="M0 78 C30 74 40 66 62 62 S100 58 122 48 S160 40 184 30 S224 20 260 8 V90 H0 Z" fill="url(#cg)"/>
+            <path class="chart__line" d="M0 78 C30 74 40 66 62 62 S100 58 122 48 S160 40 184 30 S224 20 260 8" fill="none" stroke="#0878F9" stroke-width="2.2" stroke-linecap="round"/>
+            <circle class="chart__dot" cx="260" cy="8" r="3.5" fill="#0878F9"/>
+          </svg>
+          <div class="fcard__legend"><span>Pn</span><span>Wt</span><span>Śr</span><span>Cz</span><span>Pt</span><span>Sb</span><span>Nd</span></div>
+          <div class="fcard__meta"><span><i class="sw sw--accent"></i>Zapytania</span><span><i class="sw"></i>Kliknięcia</span></div>
         </div>
 
-        <div class="lp-chip stage__chip-b" data-depth="40">
-          <span class="lp-chip__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg></span>
-          <div><b>Profesjonalne SEO</b><small>Struktura pod wyszukiwarki</small></div>
+        <div class="fcard fcard--lead stage__lead" data-depth="40">
+          <div class="toast">
+            <span class="toast__ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg></span>
+            <div><b>Nowe zapytanie</b><small>Formularz • Strona internetowa</small></div>
+            <time>teraz</time>
+          </div>
+          <div class="toast toast--2">
+            <span class="toast__ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4.5h11v7h-11zM2.5 4.5 8 9l5.5-4.5"/></svg></span>
+            <div><b>Nowa wiadomość</b><small>Instagram • Meta Ads</small></div>
+            <time>2 min</time>
+          </div>
+        </div>
+
+        <div class="phone stage__phone" data-depth="18">
+          <div class="phone__screen">
+            <div class="phone__top"><span>Reels</span><i></i></div>
+            <div class="phone__video">
+              <div class="phone__play"></div>
+            </div>
+            <div class="phone__caption"><b>@twojafirma</b><span>Za kulisami realizacji ✦</span></div>
+            <div class="phone__bar"><i></i></div>
+          </div>
         </div>
       </div>
-    </div>
   </div>
 </section>
 
@@ -758,7 +809,7 @@ function gtag_report_conversion(url) {
     <div class="accordion reveal" style="--i:1">
       <details class="acc">
         <summary><span>Ile kosztuje strona internetowa?</span><i class="acc__icon"></i></summary>
-        <div class="acc__panel"><div class="acc__inner"><p>Orientacyjnie od 1490 zł za stronę wizytówkę lub landing page. Serwisy firmowe zaczynają się od 2990–3990 zł. Ostateczna wycena zależy od zakresu, liczby podstron i wymaganych funkcjonalności. Po krótkiej rozmowie przygotowuję konkretną wycenę bez ukrytych kosztów.</p></div></div>
+        <div class="acc__panel"><div class="acc__inner"><p>Orientacyjnie od 1490 zł za stronę wizytówkę lub landing page. Serwisy firmowe zaczynają się od 2490 zł. Ostateczna wycena zależy od zakresu, liczby podstron i wymaganych funkcjonalności. Po krótkiej rozmowie przygotowuję konkretną wycenę bez ukrytych kosztów.</p></div></div>
       </details>
       <details class="acc">
         <summary><span>Ile trwa zrobienie strony?</span><i class="acc__icon"></i></summary>
@@ -866,7 +917,7 @@ function gtag_report_conversion(url) {
           </div>
           <small class="field__err" aria-live="polite"></small>
         </div>
-        <fieldset class="field">
+        <!-- <fieldset class="field">
           <legend>Budżet</legend>
           <div class="chips">
             <label class="chip"><input type="radio" name="budget" value="< 1 000 zł"><span>&lt; 1 000 zł</span></label>
@@ -875,7 +926,7 @@ function gtag_report_conversion(url) {
             <label class="chip"><input type="radio" name="budget" value="5 000+ zł"><span>5 000+ zł</span></label>
             <label class="chip"><input type="radio" name="budget" value="Nie jestem pewien"><span>Nie jestem pewien</span></label>
           </div>
-        </fieldset>
+        </fieldset> -->
         <div class="field">
           <label for="f-message">Wiadomość <b>*</b></label>
           <textarea id="f-message" name="message" rows="5" placeholder="Czym zajmuje się Twoja firma i czego potrzebujesz? Kilka zdań w zupełności wystarczy" required minlength="10"></textarea>

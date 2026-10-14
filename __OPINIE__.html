@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+    
+    body {
+      margin: 0;
+      background: #090A0F;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .story-card {
+      width: 1080px;
+      height: 1920px;
+      background: #0D0F17;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 80px;
+      box-sizing: border-box;
+    }
+
+    /* Glow Effect w tle */
+    .glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 163, 255, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .badge-title {
+      position: relative;
+      font-size: 96px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 140px;
+      letter-spacing: -2px;
+    }
+
+    .badge-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 8px;
+      width: 100%;
+      height: 24px;
+      background: #00A3FF;
+      z-index: -1;
+      opacity: 0.85;
+      border-radius: 4px;
+    }
+
+    .quote-text {
+      font-size: 52px;
+      line-height: 1.45;
+      color: #8E96A4;
+      text-align: center;
+      max-width: 900px;
+      margin-bottom: 50px;
+      font-weight: 600;
+    }
+
+    .quote-text strong {
+      color: #FFFFFF;
+      font-weight: 800;
+    }
+
+    .stars {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 120px;
+    }
+
+    .stars svg {
+      width: 100px;
+      height: 100px;
+      fill: #fffb00;
+    }
+
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.03);
+      padding: 32px 56px;
+      border-radius: 100px;
+      color: #FFFFFF;
+      font-size: 36px;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="story-card">
+    <div class="glow"></div>
+
+    <div class="badge-title">Opinie</div>
+
+    <div class="quote-text">
+      „Bardzo dobra współpraca. Chłopak zna się na kampaniach reklamowych i tworzeniu stron internetowych <strong>wszystko robi konkretnie, sprawnie i z dużą dbałością o szczegóły.</strong> Kontakt bezproblemowy, potrafi też doradzić i zaproponować sensowne rozwiązania. <strong>Zdecydowanie polecam,</strong> jeśli ktoś szuka kogoś ogarniętego w marketingu i stronach WWW.”
+    </div>
+
+    <div class="stars">
+      <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+    </div>
+
+    <div class="cta-btn">
+      Sprawdź opinie na Google
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    </div>
+  </div>
+
+</body>
+</html>
