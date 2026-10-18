@@ -873,6 +873,134 @@ address{font-style:normal}
 .related__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.25rem,2.5vw,2rem)}
 .related .post__media{aspect-ratio:16/10}
 
+
+/* FizjoKids Wadowice — podgląd projektu */
+.site--kids {
+  --kids-bg: #f0faf7;
+  --kids-primary: #45a995;
+  --kids-secondary: #e0f2fa;
+  --kids-text: #234a4a;
+  --kids-accent: #f5c878;
+
+  overflow: hidden;
+  background: var(--kids-bg);
+  color: var(--kids-text);
+  border-radius: inherit;
+}
+
+/* Nawigacja */
+.site--kids .site__nav {
+  /* background: #ffffff; */
+  color: var(--kids-text);
+}
+
+.site--kids .site__nav b {
+  color: var(--kids-primary);
+  font-weight: 800;
+}
+
+.site--kids .site__nav em {
+  background: var(--kids-primary);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-style: normal;
+}
+
+/* Sekcja główna */
+.site--kids .site__hero {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(224, 242, 250, 0.95),
+      transparent 38%
+    ),
+    linear-gradient(135deg, #f0faf7 0%, #fffaf0 100%);
+}
+
+/* Tekst */
+.site--kids .site__copy small {
+  color: #388f80;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.site--kids .site__copy .site__title {
+  color: var(--kids-text);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Przyciski */
+.site--kids .site__btns em {
+  display: inline-block;
+  background: var(--kids-primary);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.site--kids .site__btns i {
+  display: inline-block;
+  background: #ffffff;
+  color: var(--kids-text);
+  border: 1px solid #d6ebe5;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-style: normal;
+}
+
+/* Obszar grafiki */
+.site--kids .site__img {
+  background: var(--kids-secondary);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.site--kids .site__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dolne elementy dekoracyjne */
+.site--kids .site__row i {
+  background: var(--kids-secondary);
+}
+
+.site--kids .site__row i:nth-child(2) {
+  background: #d9f0e7;
+}
+
+.site--kids .site__row i:nth-child(3) {
+  background: #f8e6bd;
+}
+
+/* Etykieta branży */
+.project:has(.site--kids) .project__industry {
+  color: #388f80;
+}
+
+/* Tagi */
+.project:has(.site--kids) .tags li {
+  background: #edf8f4;
+  color: #347b6f;
+  border: 1px solid #dcefe8;
+}
+
+/* Link CTA */
+.project:has(.site--kids) .link {
+  color: #388f80;
+}
+
+.project:has(.site--kids) .link:hover {
+  color: #24685e;
+}
+
+
 /* ---------- Responsive ---------- */
 @media (max-width:1100px){
   .blog-head__inner{grid-template-columns:1fr;align-items:start}
