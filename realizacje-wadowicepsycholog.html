@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!--
+    SZABLON CASE STUDY, REWORK
+    Jak użyć:
+    1. Skopiuj plik i zmień nazwę na np. realizacje-slaskie-zlomowanie.html
+    2. Wyszukaj w pliku wszystko, co jest w [NAWIASACH KWADRATOWYCH] lub oznaczone NAZWA, i uzupełnij.
+    3. Usuń wszystkie bloki .cs-hint (żółte ramki z wskazówkami) i meta robots "noindex".
+    4. Sekcje bez prawdziwych danych (np. liczby efektów) usuń w całości. Niczego nie wymyślaj.
+    5. Klasy .cs-* na dole <style> możesz przenieść do css/landing.css.
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- Google tag: zgoda ustawiana PRZED konfiguracją tagów -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      if (localStorage.getItem('rework-cookie-consent') === 'accept') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'AW-18486694877');
+    gtag('config', 'G-25N504MHB2');
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18486694877/IPE2CI-IppkdEN2nku9E',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25N504MHB2"></script>
+
+  <title>wadowicepsycholog.pl: strona i widoczność w Google | REWORK</title>
+  <meta name="description" content="Strona internetowa gabinetu psychologa w Wadowicach. W 6 miesięcy 2,82 tys. wyświetleń i 78 kliknięć w Google (Search Console).">
+  <link rel="canonical" href="https://reworkagency.pl/realizacje-wadowicepsycholog.html">
+  <img src="https://tracker.metricool.com/c3po.jpg?hash=2908bbe2f81ba4b1c2aaf6bfb27e0d0b"/>
+  <meta name="robots" content="noindex, follow"><!-- zmień na: index, follow, max-image-preview:large -->
+  <script>document.documentElement.classList.add('js')</script>
+
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="REWORK">
+  <meta property="og:url" content="https://reworkagency.pl/realizacje-wadowicepsycholog.html">
+  <meta property="og:title" content="wadowicepsycholog.pl: case study | REWORK">
+  <meta property="og:description" content="Strona internetowa gabinetu psychologa w Wadowicach. W 6 miesięcy 2,82 tys. wyświetleń i 78 kliknięć w Google (Search Console).">
+  <meta property="og:image" content="https://reworkagency.pl/img/projects/wadowicepsycholog-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/landing.css">
+
+  <style>
+    /* ===== Case study: komponenty tylko dla tej podstrony (możesz przenieść do landing.css) ===== */
+    .cs-hero{position:relative;overflow:hidden;padding-top:calc(var(--nav-h) + clamp(2rem,5vw,4rem));padding-bottom:clamp(3rem,6vw,5rem)}
+    .cs-hero__bg{position:absolute;inset:0;pointer-events:none}
+    .cs-crumbs{position:relative;display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    .cs-crumbs li+li::before{content:"/";margin-right:.5rem;opacity:.5}
+    .cs-crumbs a:hover{color:var(--accent)}
+    .cs-hero__grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(2rem,5vw,4rem);align-items:center}
+    .cs-hero__title{font-size:clamp(2.4rem,4.6vw,4rem);line-height:1;letter-spacing:-.04em;font-weight:750;text-wrap:balance;max-width:16ch}
+    .cs-hero__title em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--accent);padding-right:.04em}
+    .cs-hero__lead{margin-top:1.5rem;color:var(--muted);font-size:clamp(1.05rem,1.45vw,1.2rem);line-height:1.6;max-width:50ch;text-wrap:pretty}
+    .cs-hero__cta{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.8rem}
+    .cs-device{border-radius:14px;overflow:hidden;box-shadow:0 40px 90px -35px rgba(11,31,55,.55)}
+    .cs-device .browser{box-shadow:none}
+    .cs-device__screen{display:block;aspect-ratio:16/10;background:repeating-linear-gradient(45deg,#14161c 0 14px,#101218 14px 28px)}
+    .cs-device__screen img{width:100%;height:100%;object-fit:cover;object-position:top}
+
+    .cs-facts{border-block:1px solid var(--line);background:var(--bg-2)}
+    .cs-facts__row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+    .cs-fact{padding:1.4rem 1.4rem;border-left:1px solid var(--line-2)}
+    .cs-fact:first-child{border-left:0;padding-left:0}
+    .cs-fact dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+    .cs-fact dd{margin-top:.45rem;font-weight:650;letter-spacing:-.01em;line-height:1.35}
+    .cs-fact dd a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+    .cs-text{display:grid;gap:1.1rem;color:var(--muted);font-size:1.08rem;line-height:1.7;max-width:60ch}
+    .cs-text p:first-child{color:var(--text);font-size:1.2rem}
+    .cs-points{display:grid;gap:.6rem;margin-top:.4rem}
+    .cs-points li{display:flex;gap:.8rem;align-items:flex-start;padding:1rem 1.15rem;border-radius:var(--r-md);border:1px solid var(--line);background:var(--surface);color:var(--text);font-weight:550;line-height:1.5}
+    .cs-points li::before{content:"";flex:none;width:8px;height:8px;margin-top:.55rem;border-radius:50%;background:var(--accent)}
+
+    .cs-scope{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.45rem}
+    .cs-scope li{font-size:.8rem;font-weight:600;padding:.4rem .75rem;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+
+    .cs-gallery{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:1.2rem;align-items:start}
+    .cs-gallery figure{margin:0}
+    .cs-shot{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line-2);background:repeating-linear-gradient(45deg,#e8eff8 0 14px,#f2f6fb 14px 28px);aspect-ratio:16/10;box-shadow:0 30px 60px -35px rgba(11,31,55,.45)}
+    .cs-shot--phone{aspect-ratio:11.5/20;max-width:300px;margin-inline:auto}
+    .cs-shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+    .cs-gallery figcaption{margin-top:.7rem;font-size:.84rem;color:var(--muted);line-height:1.5}
+
+    .cs-quote{position:relative;padding:clamp(2rem,5vw,3.6rem);border-radius:var(--r-xl);border:1px solid var(--line-2);background:linear-gradient(180deg,rgba(8,120,249,.06),rgba(255,255,255,.6))}
+    .cs-quote__mark{display:block;font-family:var(--serif);font-style:italic;font-size:5.5rem;line-height:.6;color:var(--accent)}
+    .cs-quote blockquote{margin:1rem 0 0;max-width:34ch;font-size:clamp(1.4rem,2.7vw,2.1rem);line-height:1.3;letter-spacing:-.025em;font-weight:600;text-wrap:balance}
+    .cs-quote .review__meta{margin-top:2rem}
+
+    .cs-source{margin:1.6rem auto 0;max-width:70ch;text-align:center;font-size:.86rem;color:var(--muted);line-height:1.55}
+    .cs-chart{margin:2.2rem 0 0}
+    .cs-chart figcaption{margin-top:.7rem;font-size:.84rem;color:var(--muted);line-height:1.5;text-align:center}
+    .cs-shot--wide{aspect-ratio:1910/600;max-width:none}
+    .cs-pager{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .cs-pager a{display:flex;flex-direction:column;gap:.3rem;padding:1.3rem 1.4rem;border-radius:var(--r-md);border:1px solid var(--line);background:var(--surface);transition:transform .5s var(--ease),border-color .4s}
+    .cs-pager a:hover{transform:translateY(-3px);border-color:rgba(8,120,249,.4)}
+    .cs-pager a:last-child{text-align:right}
+    .cs-pager small{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+    .cs-pager b{font-size:1.1rem;letter-spacing:-.02em}
+
+    /* Wskazówki dla autora: usuń przed publikacją */
+    .stats__row .stat{display:flex;flex-direction:column;min-width:0}
+    .stats__row .stat dd{overflow-wrap:anywhere;white-space:nowrap;align-items:baseline;gap:.2em}
+    .stats__row .stat dd .stat__suffix{color:var(--accent);font-size:.55em}
+    @media (max-width:640px){.stats__row .stat dd{font-size:clamp(1.7rem,9vw,2.4rem)}}
+    .cs-hint{margin-top:1.4rem;padding:.9rem 1.1rem;border:1px dashed #c9a227;border-radius:var(--r-sm);background:#fff8dc;color:#5c4a00;font-size:.88rem;line-height:1.55}
+    .cs-hint b{font-weight:800}
+
+    @media (max-width:980px){
+      .cs-hero__grid{grid-template-columns:1fr}
+      .cs-facts__row{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .cs-fact{border-left:0;padding-left:0;border-top:1px solid var(--line)}
+      .cs-fact:nth-child(-n+2){border-top:0}
+      .cs-gallery{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .cs-hero__cta{flex-direction:column}
+      .cs-hero__cta .btn{width:100%}
+      .cs-pager{grid-template-columns:1fr}
+      .cs-pager a:last-child{text-align:left}
+    }
+    
+    #cs-title {
+      font-size: 3.2rem;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "wadowicepsycholog.pl: strona gabinetu psychologa widoczna w Google",
+    "description": "Strona internetowa gabinetu psychologa w Wadowicach. W 6 miesięcy 2,82 tys. wyświetleń i 78 kliknięć w Google (Search Console).",
+    "inLanguage": "pl-PL",
+    "datePublished": "RRRR-MM-DD",
+    "image": "https://reworkagency.pl/img/projects/wadowicepsycholog-og.jpg",
+    "mainEntityOfPage": "https://reworkagency.pl/realizacje-wadowicepsycholog.html",
+    "author": { "@type": "Person", "name": "Karol Wysogląd" },
+    "publisher": { "@type": "Organization", "name": "REWORK", "url": "https://reworkagency.pl/", "logo": { "@type": "ImageObject", "url": "https://reworkagency.pl/img/apple-touch-icon.png" } }
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="top">
+  <div class="container nav__inner">
+    <a class="logo" href="index.html" aria-label="REWORK, strona główna">
+      <img class="logo__image" src="img/reworklogo_justlogo.png" alt="REWORK">
+      <span class="logo__word">REWORK</span>
+    </a>
+
+    <nav class="nav__menu" id="menu" aria-label="Menu główne">
+      <ul>
+        <li><a href="strony-internetowe.html#co-otrzymujesz">Co otrzymujesz</a></li>
+        <li><a href="strony-internetowe.html#realizacje">Realizacje</a></li>
+        <li><a href="strony-internetowe.html#cennik">Cennik</a></li>
+        <li><a href="strony-internetowe.html#faq">FAQ</a></li>
+      </ul>
+      <div class="nav__menu-foot">
+        <a class="btn btn--primary btn--lg" href="strony-internetowe.html#kontakt" data-track="wycena">Poproś o wycenę <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
+        <p>WEB • ADS • SOCIAL</p>
+      </div>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--ghost nav__call" href="tel:577594266" data-track="tel" onclick="return gtag_report_conversion('tel:577594266');">Zadzwoń <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.7 2.5h2a.6.6 0 0 1 .6.6l.6 2.1a.6.6 0 0 1-.3.7L5 7.2a9.5 9.5 0 0 0 3.8 3.8l1.3-1.6a.6.6 0 0 1 .7-.3l2.1.6a.6.6 0 0 1 .6.6v1.9a1.6 1.6 0 0 1-1.8 1.6C8 13.5 2.5 8 2 4.3a1.6 1.6 0 0 1 1.7-1.8Z"/></svg></a>
+      <a class="btn btn--primary nav__cta" href="strony-internetowe.html#kontakt" data-track="wycena">Poproś o wycenę <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
+      <button class="burger" type="button" aria-label="Otwórz menu" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="cs-hero" aria-labelledby="cs-title">
+  <div class="cs-hero__bg" aria-hidden="true">
+    <div class="orb orb--a"></div>
+    <div class="orb orb--b"></div>
+    <div class="grid-lines"></div>
+  </div>
+
+  <div class="container">
+    <ol class="cs-crumbs" aria-label="Ścieżka">
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="strony-internetowe.html#realizacje">Realizacje</a></li>
+      <li aria-current="page" id="url">wadowicepsycholog.pl</li>
+    </ol>
+
+    <div class="cs-hero__grid">
+      <div>
+        <p class="eyebrow">Case study · Psychologia, Wadowice</p>
+        <h1 class="cs-hero__title" id="cs-title">wadowicepsycholog.pl: gabinet <em>widoczny w Google.</em></h1>
+        <p class="cs-hero__lead">Strona internetowa gabinetu psychologicznego w Wadowicach. Poniżej dane z Google Search Console z pierwszych 6 miesięcy: ile osób zobaczyło stronę w wynikach i ile weszło.</p>
+        <div class="cs-hero__cta">
+          <a class="btn btn--primary btn--lg" href="https://wadowicepsycholog.pl/" target="_blank" rel="noopener" data-track="realizacje">Zobacz stronę na żywo <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+          <a class="btn btn--ghost btn--lg" href="strony-internetowe.html#kontakt" data-track="wycena">Chcę podobny projekt</a>
+        </div>
+      </div>
+
+      <div class="cs-device">
+        <div class="browser">
+          <div class="browser__bar"><i></i><i></i><i></i><span class="browser__url">https://wadowicepsycholog.pl</span></div>
+          <div class="cs-device__screen">
+            <img src="img/projects/wadowicepsycholog-desktop.png" alt="Strona internetowa wadowicepsycholog.pl na komputerze" width="1280" height="800" fetchpriority="high" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FAKTY ============ -->
+<section class="cs-facts" aria-label="Najważniejsze informacje o projekcie">
+  <div class="container">
+    <dl class="cs-facts__row">
+      <div class="cs-fact"><dt>Klient</dt><dd>Małgorzata Stanek - Psycholog Wadowice</dd></div>
+      <div class="cs-fact"><dt>Branża</dt><dd>Psychologia i psychoterapia</dd></div>
+      <div class="cs-fact"><dt>Zakres</dt><dd>SEO, konsultacje, zmiana domeny, zmiana zawartości strony</dd></div>
+      <div class="cs-fact"><dt>Czas realizacji</dt><dd>7 dni</dd></div>
+      <div class="cs-fact"><dt>Strona</dt><dd><a href="https://wadowicepsycholog.pl/" target="_blank" rel="noopener">wadowicepsycholog.pl</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ WYZWANIE ============ -->
+<section class="section" id="wyzwanie" aria-labelledby="wyzwanie-title">
+  <div class="container why__grid">
+    <div class="why__side reveal">
+      <p class="eyebrow">Wyzwanie</p>
+      <h2 class="h2" id="wyzwanie-title">Z czym przyszedł <em>klient.</em></h2>
+    </div>
+    <div class="reveal" style="--i:1">
+      <div class="cs-text">
+        <p>Gabinet psychologiczny miał działającą stronę, ale nikt nie mógł jej znaleźć w Google. Strona nie była zaindeksowana, więc osoby szukające psychologa w okolicy w ogóle jej nie widziały.</p>
+        <p>Do tego strona ładowała się wolno, a część tekstów nie odpowiadała na to, czego szukają ludzie wpisujący w Google np. „psycholog Wadowice“. Bez widoczności w wyszukiwarce i przy wolnej stronie gabinet tracił możliwość, by ktoś go znalazł i się skontaktował.</p>
+      </div>
+      <ul class="cs-points">
+        <li>Strona nie była zaindeksowana i nie pojawiała się w wynikach Google</li>
+        <li>Część treści wymagała przepisania pod frazy, które wpisują osoby szukające pomocy w okolicy</li>
+        <li>Wolne ładowanie strony, zwłaszcza na telefonie</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROZWIĄZANIE ============ -->
+<section class="section" id="rozwiazanie" aria-labelledby="rozwiazanie-title" style="background:var(--bg-2);border-block:1px solid var(--line)">
+  <div class="container">
+    <div class="section__head section__head--row reveal">
+      <div>
+        <p class="eyebrow">Rozwiązanie</p>
+        <h2 class="h2" id="rozwiazanie-title">Co <em>zrobiłem.</em></h2>
+      </div>
+      <p class="section__lead">Zadbałem o to, żeby Google mógł stronę znaleźć i odczytać, a odwiedzający szybko dostawali to, czego szukają.</p>
+    </div>
+
+    <div class="land-steps">
+      <article class="land-step reveal">
+        <p class="land-step__num">01</p>
+        <h3>Diagnoza: </h3>
+        <p>Sprawdziłem, dlaczego strona nie pojawia się w Google: indeksowanie, struktura i treści.</p>
+      </article>
+      <article class="land-step reveal" style="--i:1">
+        <p class="land-step__num">02</p>
+        <h3>Nowa domena i SEO</h3>
+        <p>Przeniosłem stronę na domenę wadowicepsycholog.pl i uporządkowałem podstawowe SEO: tytuły, opisy i strukturę nagłówków.</p>
+      </article>
+      <article class="land-step reveal" style="--i:2">
+        <p class="land-step__num">03</p>
+        <h3>Teksty</h3>
+        <p>Przepisałem część treści tak, by odpowiadały na pytania osób szukających pomocy psychologicznej w Wadowicach i okolicy.</p>
+      </article>
+      <article class="land-step reveal" style="--i:3">
+        <p class="land-step__num">04</p>
+        <h3>Szybkość</h3>
+        <p>Przyspieszyłem ładowanie strony: zoptymalizowałem grafiki i kod, tak by dobrze działała także na telefonie.</p>
+      </article>
+    </div>
+
+    <ul class="cs-scope" aria-label="Zakres prac">
+      <li>Naprawa indeksowania</li>
+      <li>Zmiana domeny</li>
+      <li>SEO podstawowe</li>
+      <li>Przepisanie treści</li>
+      <li>Optymalizacja szybkości</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ EFEKT ============ -->
+<section class="section" id="efekt" aria-labelledby="efekt-title">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <p class="eyebrow">Efekt</p>
+      <h2 class="h2" id="efekt-title">Co się <em>zmieniło.</em></h2>
+      <p class="section__lead">W 6 miesięcy od 29.04 do 29.10.2026 strona zebrała w Google 2,82 tys. wyświetleń i 78 kliknięć. Najczęstsze zapytanie to „psycholog wadowice".</p>
+    </div>
+
+    <dl class="stats__row reveal">
+      <div class="stat"><dt>Kliknięć z Google</dt><dd>78</dd></div>
+      <div class="stat"><dt>Wyświetleń w wynikach</dt><dd>2,82<span class="stat__suffix">tys.</span></dd></div>
+      <div class="stat"><dt>Średni CTR</dt><dd>2,8%</dd></div>
+      <div class="stat"><dt>Średnia pozycja</dt><dd>8,2</dd></div>
+    </dl>
+
+    <p class="cs-source reveal">Źródło: Google Search Console, typ wyszukiwania „Sieć", okres 29.04–29.10.2026. Zapytanie „psycholog wadowice": 1 307 wyświetleń i 16 kliknięć. Średnia pozycja dotyczy wszystkich zapytań razem.</p>
+
+    <figure class="cs-chart reveal">
+      <div class="cs-shot cs-shot--wide"><img src="img/projects/wadowicepsycholog-gsc.png" alt="Wykres kliknięć i wyświetleń dziennie w Google Search Console, 29.04–29.10.2026" width="1700" height="420" loading="lazy" decoding="async"></div>
+      <figcaption>Kliknięcia i wyświetlenia dziennie, 29.04–28.10.2026 (Google Search Console). Znacznik z 16.06.2026: publikacja strony</figcaption>
+    </figure>
+    <!-- <p class="cs-hint"><b>Do uzupełnienia:</b> zrób zrzut samego wykresu z Search Console i zapisz jako <code>img/projects/wadowicepsycholog-gsc.webp</code>. Wpisz w podpisie, co oznacza adnotacja z 16.06. Nie opisuj wzrostu jako skutku Twoich działań, jeśli nie masz na to dowodu. Podaj tylko to, co pokazują dane.</p> -->
+  </div>
+</section>
+
+<!-- ============ GALERIA ============ -->
+<section class="section" id="galeria" aria-labelledby="galeria-title" style="padding-top:0">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">Wygląd</p>
+      <h2 class="h2" id="galeria-title">Jak to <em>wygląda.</em></h2>
+    </div>
+
+    <div class="cs-gallery">
+      <figure class="reveal">
+        <div class="cs-shot"><img src="img/projects/NAZWA-sekcja.png" alt="[Opis: co widać na zrzucie, np. sekcja z ofertą]" width="1280" height="800" loading="lazy" decoding="async"></div>
+        <!-- <figcaption>[Podpis: np. „Strona główna: oferta i przycisk do wyceny od razu na górze."]</figcaption> -->
+      </figure>
+      <figure class="reveal" style="--i:1">
+        <div class="cs-shot cs-shot--phone"><img src="img/projects/NAZWA-mobile.png" alt="[Strona na telefonie]" width="740" height="1110" loading="lazy" decoding="async"></div>
+        <!-- <figcaption>[Podpis: np. „Na telefonie: telefon i formularz zawsze pod ręką."]</figcaption> -->
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPINIA ============ -->
+<!-- <section class="section" id="opinia" aria-labelledby="opinia-title" style="padding-top:0">
+  <div class="container">
+    <h2 class="eyebrow" id="opinia-title">Opinia klienta</h2>
+    <div class="cs-quote reveal">
+      <span class="cs-quote__mark" aria-hidden="true">“</span>
+      <blockquote>[Prawdziwy cytat klienta, za jego zgodą. Najlepiej 1–2 zdania z konkretem.]</blockquote>
+      <footer class="review__meta">
+        <span class="review__avatar">[X]</span>
+        <div><b>[Imię i nazwisko]</b><small>[Stanowisko, nazwa firmy]</small></div>
+      </footer>
+    </div>
+    <p class="cs-hint"><b>Wskazówka:</b> bez zgody klienta nie publikuj cytatu ani jego danych. Jeśli nie masz opinii, usuń tę sekcję i zachęć klienta do wystawienia opinii w Google, a potem pokaż ją na stronie.</p>
+  </div>
+</section> -->
+
+<!-- ============ POPRZEDNI / NASTĘPNY ============ -->
+<!-- <section class="section" aria-label="Inne realizacje" style="padding-top:0">
+  <div class="container">
+    <nav class="cs-pager" aria-label="Inne realizacje">
+      <a href="NAZWA-POPRZEDNIEGO.html" data-track="realizacje"><small>← Poprzednia realizacja</small><b>[Nazwa klienta]</b></a>
+      <a href="NAZWA-NASTEPNEGO.html" data-track="realizacje"><small>Następna realizacja →</small><b>[Nazwa klienta]</b></a>
+    </nav>
+  </div>
+</section> -->
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final" aria-labelledby="final-title">
+  <div class="final__bg" aria-hidden="true"><div class="orb orb--d"></div><div class="final__ring"></div></div>
+  <div class="container final__inner reveal">
+    <p class="eyebrow">Następny krok</p>
+    <h2 class="final__title" id="final-title">Chcesz podobny <em>efekt</em> dla swojej firmy?</h2>
+    <p class="final__text">Napisz albo zadzwoń. W 24 h dostaniesz odpowiedź z konkretną propozycją zakresu i wyceny.</p>
+    <a class="btn btn--primary btn--xl" href="strony-internetowe.html#kontakt" data-track="wycena">Poproś o bezpłatną wycenę <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
+    <a class="final__phone" href="tel:577594266" data-track="telefon" onclick="return gtag_report_conversion('tel:577594266');"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>577 594 266</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="index.html" aria-label="REWORK">
+          <img class="logo__image" src="img/reworklogo.png" alt="REWORK">
+          <span class="logo__word">REWORK</span>
+        </a>
+        <p class="footer__tag">WEB • ADS • SOCIAL</p>
+        <p class="footer__desc">Strony internetowe, Google Ads, Meta Ads, social media i short-form video: jeden system pozyskiwania klientów dla Twojej firmy.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Strony internetowe według obszaru">
+        <h4>Obszar</h4>
+        <ul>
+          <li><a href="strony-internetowe-krakow.html">Strony internetowe Kraków</a></li>
+          <li><a href="strony-internetowe-wadowice.html">Strony internetowe Wadowice</a></li>
+          <li><a href="strony-internetowe-warszawa.html">Strony internetowe Warszawa</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Usługi w stopce">
+        <h4>Usługi</h4>
+        <ul>
+          <li><a href="sklepy-internetowe.html">Sklepy internetowe</a></li>
+          <li><a href="kampanie-google-ads.html">Kampanie Google Ads</a></li>
+          <li><a href="audyt-stron-www.html">Audyt stron WWW</a></li>
+          <li><a href="blog/">Blog</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Strony internetowe według branży">
+        <h4>Branże</h4>
+        <ul>
+          <li><a href="strony-dla-deweloperow.html">Strony dla deweloperów</a></li>
+          <li><a href="strony-dla-kancelarii-prawnych.html">Strony dla kancelarii prawnych</a></li>
+          <li><a href="strony-dla-firm-budowlanych.html">Strony dla firm budowlanych</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:karwys08@gmail.com">karwys08@gmail.com</a></li>
+          <li><a href="tel:577594266" onclick="return gtag_report_conversion('tel:577594266');">577 594 266</a></li>
+          <li><span>Wadowice, Kraków, Oświęcim, Kalwaria Zebrzydowska, Bielsko-Biała</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> REWORK. Wszelkie prawa zastrzeżone.</p>
+      <div class="footer__meta">
+        <a href="polityka-prywatnosci.html" style="font-weight:600;text-decoration:underline;text-underline-offset:3px">Polityka prywatności</a>
+        <button class="cookie-settings" id="cookie-settings" type="button">Ustawienia cookies</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Zgoda na pliki cookies">
+  <div class="container cookie-banner__inner">
+    <div class="cookie-banner__content">
+      <h3>Ta strona używa plików cookies</h3>
+      <p>Wykorzystujemy je do działania strony, poprawy komfortu użytkowania i analityki. Możesz zaakceptować wszystkie, odrzucić niezbędne lub zmienić wybór w dowolnym momencie. <a href="polityka-prywatnosci.html">Polityka prywatności</a>.</p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="btn btn--ghost btn--sm" type="button" data-cookie="essential">Tylko niezbędne</button>
+      <button class="btn btn--ghost btn--sm" type="button" data-cookie="reject">Odrzuć</button>
+      <button class="btn btn--primary btn--sm" type="button" data-cookie="accept">Akceptuję</button>
+    </div>
+  </div>
+</div>
+
+<div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+  <a class="btn btn--primary btn--lg" href="strony-internetowe.html#kontakt" tabindex="-1" data-track="wycena">Poproś o wycenę <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"/></svg></a>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

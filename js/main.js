@@ -243,8 +243,16 @@
 
     const validators = {
       name: v => v.trim().length < 2 ? 'Podaj swoje imię.' : '',
-      email: v => !v.trim() ? 'Podaj adres email.' : (!emailRe.test(v.trim()) ? 'Ten adres email wygląda na niepoprawny.' : ''),
-      phone: v => v.trim() && !phoneRe.test(v.trim()) ? 'Ten numer telefonu wygląda na niepoprawny.' : '',
+      email: v => {
+        const hasPhone = !!(form.elements.phone && form.elements.phone.value.trim());
+        if (!v.trim()) return hasPhone ? '' : 'Podaj email lub telefon.';
+        return !emailRe.test(v.trim()) ? 'Ten adres email wygląda na niepoprawny.' : '';
+      },
+      phone: v => {
+        const hasEmail = !!(form.elements.email && form.elements.email.value.trim());
+        if (!v.trim()) return hasEmail ? '' : 'Podaj telefon lub email.';
+        return !phoneRe.test(v.trim()) ? 'Ten numer telefonu wygląda na niepoprawny.' : '';
+      },
       service: v => !v ? 'Wybierz usługę, która Cię interesuje.' : '',
       message: v => v.trim().length < 10 ? 'Napisz kilka słów więcej (min. 10 znaków).' : '',
       consent: (v, el) => !el.checked ? 'Potrzebna jest zgoda, żebym mógł odpowiedzieć.' : ''
@@ -287,7 +295,8 @@
       access_key: WEB3FORMS_KEY,
       subject: `Nowe zapytanie: ${data.service} — ${data.name}`,
       from_name: 'REWORK — formularz',
-      ...data
+      ...data,
+      email: data.email || undefined
     })
   });
   const json = await res.json().catch(() => ({}));
@@ -304,6 +313,14 @@
         window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         resolve();
       }, 700);
+    });
+
+    ['email', 'phone'].forEach(n => {
+      const el = form.elements[n];
+      el && el.addEventListener('input', () => {
+        const other = form.elements[n === 'email' ? 'phone' : 'email'];
+        if (other && other.closest('.field')?.classList.contains('is-invalid')) validateField(other);
+      });
     });
 
     form.addEventListener('submit', async e => {
@@ -324,6 +341,7 @@
       try {
         const data = collect();
         if (FORM_ENDPOINT) await sendViaEndpoint(data); else await sendViaMailto(data);
+        track('generate_lead', { service: form.elements.service && form.elements.service.value, page_path: location.pathname });
         form.hidden = true;
         success.hidden = false;
         success.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
@@ -343,6 +361,19 @@
       $('#f-name').focus();
     });
   }
+
+  /* ---------- Zdarzenia Analytics (telefon, e-mail, CTA, formularz) ---------- */
+  const track = (name, params) => {
+    try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch (e) {}
+  };
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a');
+    if (!a) return;
+    const href = a.getAttribute('href') || '';
+    if (href.startsWith('tel:')) track('click_phone', { link_url: href, page_path: location.pathname });
+    else if (href.startsWith('mailto:')) track('click_email', { link_url: href, page_path: location.pathname });
+    else if (a.dataset.track === 'wycena') track('click_cta', { cta: 'wycena', page_path: location.pathname });
+  }, true);
 
   /* ---------- Cookie consent ---------- */
   const COOKIE_KEY = 'rework-cookie-consent';
