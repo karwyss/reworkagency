@@ -341,7 +341,10 @@
       try {
         const data = collect();
         if (FORM_ENDPOINT) await sendViaEndpoint(data); else await sendViaMailto(data);
-        track('generate_lead', { service: form.elements.service && form.elements.service.value, page_path: location.pathname });
+        const svc = (form.elements.service && form.elements.service.value) || 'formularz';
+track('generate_lead', { service: svc, page_path: location.pathname });
+// rework_lead is the event Ads imports; skip it where landing.js already sends it
+if (!HAS_LANDING_JS) track('rework_lead', { service: svc, page_path: location.pathname });
         form.hidden = true;
         success.hidden = false;
         success.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
@@ -363,6 +366,7 @@
   }
 
   /* ---------- Zdarzenia Analytics (telefon, e-mail, CTA, formularz) ---------- */
+  const HAS_LANDING_JS = !!document.querySelector('script[src*="landing.js"]');
   const track = (name, params) => {
     try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch (e) {}
   };
@@ -370,7 +374,11 @@
     const a = e.target.closest && e.target.closest('a');
     if (!a) return;
     const href = a.getAttribute('href') || '';
-    if (href.startsWith('tel:')) track('click_phone', { link_url: href, page_path: location.pathname });
+    if (href.startsWith('tel:')) {
+      track('click_phone', { link_url: href, page_path: location.pathname });
+      // rework_phone_click is the event Ads imports; landing.js already sends it
+      if (!HAS_LANDING_JS) track('rework_phone_click', { link_url: href, page_path: location.pathname });
+    }
     else if (href.startsWith('mailto:')) track('click_email', { link_url: href, page_path: location.pathname });
     else if (a.dataset.track === 'wycena') track('click_cta', { cta: 'wycena', page_path: location.pathname });
   }, true);
