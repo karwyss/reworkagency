@@ -328,7 +328,7 @@
       hideAlert();
       if ($('.hp', form).value) return; // bot
 
-      const fields = ['name', 'email', 'phone', 'service', 'message', 'consent'].map(n => form.elements[n]);
+      const fields = ['name', 'email', 'phone', 'service', 'message', 'consent'].map(n => form.elements[n]).filter(Boolean);
       const ok = fields.map(validateField).every(Boolean);
       if (!ok) {
         const first = $('.is-invalid input, .is-invalid select, .is-invalid textarea', form);
